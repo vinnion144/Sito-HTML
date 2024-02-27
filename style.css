@@ -1,0 +1,51 @@
+*{box-sizing: border-box;}
+
+h1,h2,h3,p,a {color: white;font-family: Arial; text-decoration: NONE}
+
+.background{object-fit: cover;height: 100%;width:100%; top: 0; left: 0;margin: 0}
+
+.homebar{
+    display: inline-block;
+    position: fixed;
+    width: 100%;
+    top: -14;
+    left: 0;
+    height: 70px;
+    background-color: #0059b3;
+
+}
+
+.footerbar{
+    display: inline-block;
+    position: absolute;
+    width:100%;
+    height:50px;
+    bottom: -16; 
+    background-color: black;
+}
+
+#footerbarid li p{font-size: 20px}
+
+#homebarid{text-align:center;}
+
+#homebarid li{
+    display: inline;
+    position: relative;
+    top:15px
+}
+
+.generi{
+    display: inline-block;
+    position: absolute; 
+    color: ;
+    text-align:center;
+    width:100%;
+    font-size: 30px;
+    top: 100px;
+}
+
+#homebarid li a{
+    font-size:30px;
+    margin: 5px;
+    padding: 10px;
+}
