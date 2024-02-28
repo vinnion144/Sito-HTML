@@ -1,23 +1,52 @@
 <html>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <head>
+        <meta charset="UFT-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>
             Nome sito
         </title>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div>
-            <header>
-                <ul id="homebarid" class="homebar">
-                    <li><a href="index.html" >NOME SITO</a></li>
-                    <li><a href="#generi_sezione" >DESTINAZIONI</a></li>
-                </ul>
-            </header>
-        </div>
+        <header>
+            <ul id="homebarid" class="homebar">
+                <li><a href="index.html" >NOME SITO</a></li>
+                <li><a href="#generi_sezione" >DESTINAZIONI</a></li>
+            </ul>
+        </header>
+
         <main>
             <div><h1 class="titolo"><b>Prenota la camera dei tuoi sogni</b></h1></div>
             <h1 id="generi_sezione" class="generi">Destinazioni</h1>
+            <div class="spazio"></div>
+            <div class="slide-container">
+                <div class="slide fade">
+                    <img src="Tokyo.jpg" width="600px" height="350px"> 
+                </div>
+                <div class="slide fade">
+                    <img src="Messico.jpg" width="600px" height="350px"> 
+                </div>
+                <div class="slide fade">
+                    <img src="Sudafrica.jpg" width="600px" height="350px"> 
+                </div>
+            </div> 
+            <script>
+                var slideIndex = 1;
+                change();
+
+                function change() {
+                    var i;
+                    var x = document.getElementsByClassName("slide");
+                    for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none"; 
+                    }
+                    slideIndex++;
+                    if (slideIndex > x.length) {slideIndex = 1} 
+                    x[slideIndex-1].style.display = "block"; 
+                    setTimeout(change, 4000); 
+                }
+            </script> 
         </main>
         
         <footer>

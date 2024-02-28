@@ -12,6 +12,9 @@ html{
 body{
     margin: 0;
 }
+main {
+    height: 100%;
+}
 
 .header_border{
     border: 10px red;
@@ -79,4 +82,27 @@ body{
     margin-top:10px;
     padding: 10px;
     border: 3px solid white;
+    border-radius: 4px;
+}
+.slide-container {
+    max-width: 800px;
+    max-height: 800px;
+    margin: auto;
+    position: absolute;
+    top: 300px;
+    left: 550px;
+    background-color: black;
+}
+.slide {
+    display: none;
+    max-width: 800px;
+    max-height: 800px;
+}
+.fade {
+    animation-name: fade;
+    animation-duration: 2.5s;
+}
+@keyframes fade {
+    from {opacity: 0.4}
+    to {opacity: 1}
 }
