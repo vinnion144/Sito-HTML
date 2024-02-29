@@ -3,7 +3,7 @@
 h1,h2,h3,p,a {color: white;font-family: Arial; text-decoration: NONE}
 
 html{
-    background-color: #c79f91;
+    background-color: whitesmoke;
 }
 
 .pic-res{
@@ -43,7 +43,7 @@ header{
     top: 0;
     left: 0;
     height: 70px;
-    background-color: whitesmoke;
+    background-color: rgb(63, 129, 170);
 
 }
 
@@ -54,7 +54,7 @@ header{
     text-align:center;
     position:relative;
     padding: 15;
-    color: white;
+    color: #c79f91;
     margin-top:80;
     visibility: collapse;
 }
@@ -64,7 +64,7 @@ header{
     width:100%;
     margin: 0;
     bottom: 0;
-    background-color: black;
+    background-color: rgb(63, 129, 170);
 }
 
 #footerbarid {font-size: 20px; margin:0}
@@ -78,11 +78,11 @@ header{
 }
 #homebarid li a{
     font-size:30px;
-    color: #c79f91;
+    color: white;
     margin: 5px;
     margin-top:10px;
     padding: 10px;
-    border: 3px solid #c79f91;
+    border: 3px solid white;
     border-radius: 4px;
 }
 .slide-container {
@@ -90,9 +90,9 @@ header{
     height: 530px;
     margin: auto;
     position: relative;
-    top: 250px;
-    border: 3px solid black;
-    background-color: black;
+    top: 150px;
+    border: 3px solid rgb(63, 129, 170);
+    background-color: rgb(63, 129, 170);
 
 }
 .slide-container .slide{
@@ -111,11 +111,34 @@ header{
 }
 .fade {
     animation-name: fade;
-    animation-duration: 2.5s;
+    animation-duration: 4s;
 }
 @keyframes fade {
-    from {opacity: 0.4}
+    from {opacity: 0.5}
     to {opacity: 1}
+}
+.dietro, .avanti {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: 10px;
+    margin-top: -12px;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 13px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+/*per spostare a destra la freccia "avanti"*/
+.avanti {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+/*per rendere scure le freccette quando ci passo sopra*/
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
 }
 
 /*per il cellulare*/
@@ -153,14 +176,13 @@ header{
         margin: 4px;
         margin-top:8px;
         padding: 8px;
-        border: 3px solid #c79f91;
+        border: 3px solid rgb(63, 129, 170);
         border-radius:3px;
     }
     .slide-container {
         width: 600px;
         height: 380px;
-        top: 180px;
-    
+        top: 100px;
     }
     .slide {
         display: none;
