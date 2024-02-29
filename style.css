@@ -28,6 +28,11 @@ header{
     z-index: 2;
 }
 
+header{
+    height: 70px;
+    z-index: 2;
+}
+
 .background{object-fit: cover;height: 100%;width:100%; top: 0; left: 0;margin: 0}
 
 .homebar{
@@ -51,18 +56,19 @@ header{
     padding: 15;
     color: white;
     margin-top:80;
+    visibility: collapse;
 }
 .footerbar{
     display: inline-block;
     position:relative;
+    position:relative;
     width:100%;
-    height:50px;
-    bottom: -3; 
     margin: 0;
+    bottom: 0;
     background-color: black;
 }
 
-#footerbarid li p{font-size: 20px}
+#footerbarid {font-size: 20px; margin:0}
 
 #homebarid{text-align:center;}
 
