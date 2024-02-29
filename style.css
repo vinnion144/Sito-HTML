@@ -9,6 +9,12 @@ html{
     background-size:100% 100%;
 }
 
+.pic-res{
+    display:block;
+    position: absolute;
+
+}
+
 body{
     margin: 0;
 }
@@ -18,6 +24,11 @@ main {
 
 .header_border{
     border: 10px red;
+}
+
+header{
+    height: 70px;
+    z-index: 2;
 }
 
 .background{object-fit: cover;height: 100%;width:100%; top: 0; left: 0;margin: 0}
@@ -31,6 +42,7 @@ main {
     left: 0;
     height: 70px;
     background-color: #c79f91;
+    z-index: 2;
 
 }
 
@@ -43,19 +55,19 @@ main {
     padding: 15;
     color: white;
     margin-top:80;
+    visibility: collapse;
 }
 
 .footerbar{
     display: inline-block;
-    position:absolute;
+    position:relative;
     width:100%;
-    height:50px;
-    bottom: -3; 
     margin: 0;
+    bottom: 0;
     background-color: black;
 }
 
-#footerbarid li p{font-size: 20px}
+#footerbarid {font-size: 20px; margin:0}
 
 #homebarid{text-align:center;}
 
@@ -71,9 +83,9 @@ main {
     text-align:center;
     width:100%;
     margin:0;
-    margin-top: 80;
+    margin-top: 10;
     padding: 15;
-    visibility: collapse;
+    visibility: visible;
 }
 
 #homebarid li a{
@@ -85,18 +97,21 @@ main {
     border-radius: 4px;
 }
 .slide-container {
-    max-width: 800px;
-    max-height: 800px;
+    z-index: 1;
+    display: flex;
+    width:100%;
+    height: 500px;
     margin: auto;
-    position: absolute;
-    top: 300px;
-    left: 550px;
+    top: 100px;
+    left: 0;
+    position:relative;
     background-color: black;
 }
-.slide {
-    display: none;
-    max-width: 800px;
-    max-height: 800px;
+.slide{
+    /* display: block; */
+    width: 100%;
+    height: auto;
+    /* position:absolute; */
 }
 .fade {
     animation-name: fade;
