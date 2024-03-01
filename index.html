@@ -21,13 +21,16 @@
             <div class="spazio"></div>
             <div class="slide-container" id="destinazioni">
                 <div class="slide fade">
-                    <img src="Tokyo.jpg"> 
+                    <img src="Kyoto.jpg"> 
                 </div>
                 <div class="slide fade">
                     <img src="Messico.jpg"> 
                 </div>
                 <div class="slide fade">
                     <img src="Sudafrica.jpg"> 
+                </div>
+                <div class="slide fade">
+                    <img src="Lione.jpg"> 
                 </div>
                 <a class="dietro" onclick="change(-1)">&#10094;</a>
                 <a class="avanti" onclick="change(1)">&#10095;</a>
@@ -39,15 +42,6 @@
                 change(j);
                 function change(j) {
                     if (j == 1 || j == -1 ) {
-                        var i;
-                        var x = document.getElementsByClassName("slide");
-                        for (i = 0; i < x.length; i++) {
-                        x[i].style.display = "none"; 
-                        }
-                        slideIndex++;
-                        if (slideIndex > x.length) {slideIndex = 1}
-                        if (slideIndex < 1) {slideIndex = x.length}  
-                        x[slideIndex-1].style.display = "block";
                         if (j==1) {
                             var i;
                             var x = document.getElementsByClassName("slide");
