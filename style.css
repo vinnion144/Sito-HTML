@@ -178,6 +178,16 @@ footer {
     border-left: 1px solid black;
     border-right: 1px solid black;
 }
+.grid-item-30 {
+    height: 400px;
+    width:30%;
+    margin: 30px;
+    text-align: center;
+    font-size: 15px;
+    text-wrap: wrap;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
 .grid-item img{
     width:100%;
     height: 60%;
@@ -189,21 +199,50 @@ footer {
 
 /*per il cellulare*/
 @media (max-width: 600px) {
-    .grid-container {
-        display: grid;
-        grid-template-columns: 1fr; 
-        grid-gap: 10px; 
-        flex-wrap: wrap;
+    .grid-item {
+        height: 400px;
+        width:100%;
+        margin: 30px;
+        text-align: center;
+        font-size: 15px;
+        text-wrap: wrap;
+        border-left: 1px solid black;
+        border-right: 1px solid black;
+    }
+    .grid-item-30 {
+        height: 400px;
+        width:100%;
+        margin: 30px;
+        text-align: center;
+        font-size: 15px;
+        text-wrap: wrap;
+        border-left: 1px solid black;
+        border-right: 1px solid black;
     }
 }
 /*per il tablet*/
 @media (min-width: 600px) and (max-width: 990px){
-    .grid-container {
-        display: grid;
-        grid-template-columns: 1fr; 
-        grid-gap: 10px; 
-        flex-wrap: wrap;
+    .grid-item {
+        height: 400px;
+        width:100%;
+        margin: 30px;
+        text-align: center;
+        font-size: 15px;
+        text-wrap: wrap;
+        border-left: 1px solid black;
+        border-right: 1px solid black;
     }
+    .grid-item-30 {
+        height: 400px;
+        width:100%;
+        margin: 30px;
+        text-align: center;
+        font-size: 15px;
+        text-wrap: wrap;
+        border-left: 1px solid black;
+        border-right: 1px solid black;
+    }
+    
 }
 /*per i laptop, tipo quello che vedrà Vincenzo*/
 @media (min-width: 990px) and (max-width: 1300px){
