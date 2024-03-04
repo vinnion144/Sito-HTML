@@ -167,9 +167,38 @@ main {
     bottom: -100;
     right: 0;
 }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tre colonne con uguale spessore */
+    flex-wrap: wrap;
+}
+
+
+
+.grid-item {
+    background-color: #ddd;
+    padding: 20px;
+    text-align: center;
+    font-size: 15px;
+    background-size: auto;
+    text-wrap: wrap;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.chi-siamo-testo{
+    color:black;
+}
+
 /*per il cellulare*/
 @media (max-width: 600px) {
-    
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr; 
+        grid-gap: 10px; 
+        flex-wrap: wrap;
+    }
 }
 /*per il tablet*/
 @media (min-width: 600px) and (max-width: 990px){
