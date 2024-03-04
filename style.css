@@ -198,43 +198,18 @@ footer {
 }
 /*per il tablet*/
 @media (min-width: 600px) and (max-width: 990px){
-    
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr; 
+        grid-gap: 10px; 
+        flex-wrap: wrap;
+    }
 }
 /*per i laptop, tipo quello che vedrà Vincenzo*/
 @media (min-width: 990px) and (max-width: 1300px){
-    header{
-        height:50px;
-    }
-    .homebar{
-        height: 50px;
-    }
-    
-    .titolo{
-        padding: 12;
-        margin-top:60;
-    }
-    .footerbar{
-        height:40px;
-    }
+
     
     #footerbarid li p{font-size: 16px}
-    
-    #homebarid li{
-        top:12px
-    }
-    #homebarid li a{
-        font-size:24px;
-        margin: 4px;
-        margin-top:8px;
-        padding: 8px;
-        border: 3px solid rgb(63, 129, 170);
-        border-radius:3px;
-    }
-    .slide-container {
-        width: 600px;
-        height: 380px;
-        top: 100px;
-    }
     .slide {
         display: none;
         width: 500px;
