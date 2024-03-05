@@ -175,13 +175,10 @@ footer {
     text-align: center;
     font-size: 15px;
     text-wrap: wrap;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
 }
 .grid-item-30 {
+    width: 33.33%;
     height: 400px;
-    width:30%;
-    margin: 30px;
     text-align: center;
     font-size: 15px;
     text-wrap: wrap;
@@ -197,6 +194,103 @@ footer {
     color:black;
 }
 
+.sub-text{
+    font-size: 50px;
+    font-family: "Open Sans";
+    letter-spacing: 1px;
+    font-weight: 200;
+    color: #093E77;
+    text-align: center;
+}
+
+.light-border{
+    display: block;
+    max-width: 100%;
+    text-align: center;
+    margin: auto;
+    width: 15%;
+    border-top: solid 1px #093E77;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.irrelevant-text{
+    margin: 1%;
+    font-size: 25px;
+    font-family: "Open Sans";
+    line-height: 40px;
+    padding-bottom: 45px;
+    max-width:100%;
+    text-align: center;
+    color: #093E77;
+}
+
+.container{
+    display: block;
+    max-width: 1200px;
+    position: relative;
+    width: 100%;
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+    margin-right: auto;
+    margin-left: auto;
+    line-height: 1.5;
+}
+
+.row{
+    margin-bottom: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 100%;
+    font-family: "Open Sans";
+    line-height: 1.5;
+}
+
+.element{
+    width:50%;
+
+}
+
+.element-text{
+    display: block;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+    font-size: 25px;
+    color: #093E77;
+}
+
+.element-text-p{
+    display: block;
+    color: #295b8a;
+    font-size: 15px;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+
+}
+
+.element-image{
+    vertical-align: middle;
+    width: 560px;
+    height: 300px;
+}
+
+.main-carousel{padding: 50px 0;}
+
+.carousel-cell{
+    height: 350px;
+    width: 350px; 
+    background-color: #666;
+    border-radius: 100%;
+    line-height: 350px;
+    text-align: center;
+    margin-right: 40px;
+    background: linear-gradient(0deg, rgba(0,0,0, 0.6), rgba(0,0,0, 1)), url('foto.jpg');
+    background-size: cover  ;
+    margin-right: 20px; 
+    transition: 1.5s;
+}
+
 /*per il cellulare*/
 @media (max-width: 600px) {
     .grid-item {
@@ -206,8 +300,8 @@ footer {
         text-align: center;
         font-size: 15px;
         text-wrap: wrap;
-        border-left: 1px solid black;
-        border-right: 1px solid black;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
     }
     .grid-item-30 {
         height: 400px;
@@ -216,8 +310,8 @@ footer {
         text-align: center;
         font-size: 15px;
         text-wrap: wrap;
-        border-left: 1px solid black;
-        border-right: 1px solid black;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
     }
 }
 /*per il tablet*/
@@ -229,8 +323,8 @@ footer {
         text-align: center;
         font-size: 15px;
         text-wrap: wrap;
-        border-left: 1px solid black;
-        border-right: 1px solid black;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
     }
     .grid-item-30 {
         height: 400px;
@@ -246,7 +340,26 @@ footer {
 }
 /*per i laptop, tipo quello che vedrà Vincenzo*/
 @media (min-width: 990px) and (max-width: 1300px){
-
+    .grid-item {
+        height: 400px;
+        width:100%;
+        margin: 30px;
+        text-align: center;
+        font-size: 15px;
+        text-wrap: wrap;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+    }
+    .grid-item-30 {
+        height: 400px;
+        width:100%;
+        margin: 30px;
+        text-align: center;
+        font-size: 15px;
+        text-wrap: wrap;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+    }
     
     #footerbarid li p{font-size: 16px}
     .slide {
