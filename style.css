@@ -38,6 +38,14 @@ header{
     margin-right: 10px;
     position: relative;
 }
+.homebar img:hover {
+    max-width: 100%;
+    max-height: 100%;
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+    scale:1.1;
+}
 .homebar a {
     max-width: 100%;
     max-height: 100%;
@@ -47,8 +55,17 @@ header{
     top: -40px;
     font-size: 30px;
 }
-
-.homebar h1{
+.homebar a:hover {
+    max-width: 100%;
+    max-height: 100%;
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    top: -40px;
+    font-size: 30px;
+    scale:1.1;
+}
+.homebar h1 {
     max-width: 100%;
     max-height:100%;
     display: inline-block;
@@ -56,6 +73,17 @@ header{
     font-size: 30px;
     top: -40px;
     left: 30%;
+    scale:1.1;
+}
+.homebar h1:hover {
+    max-width: 100%;
+    max-height:100%;
+    display: inline-block;
+    position: relative;
+    font-size: 30px;
+    top: -40px;
+    left: 30%;
+    scale:1.1;
 }
 main {
     width: 100%;
@@ -77,6 +105,7 @@ footer {
     width: 100%;
     position: relative;
     bottom: 0px;
+    margin-top: 20px;
 }
 .footerbar{
     display: inline-block;
@@ -140,8 +169,8 @@ footer {
     border-radius: 3px 0 0 3px;
 }
 /*per rendere scure le freccette quando ci passo sopra*/
-.prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
+.dietro:hover, .avanti:hover {
+    background-color: rgba(0,0,0,0.4);
 }
 .text {
     font-size: 40px;
