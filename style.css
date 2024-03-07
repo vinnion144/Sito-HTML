@@ -5,6 +5,19 @@ h1,h2,h3,p,a,.text {color: white;font-family: Arial; text-decoration: NONE}
 .img-res{
     width:100%;
     height: auto;
+    vertical-align: middle;
+}
+
+.img-res-2{
+    width: 100%;
+    height: auto;
+}
+
+.image-container{
+    position:relative;
+    width:100%;
+    vertical-align:middle;
+    margin-bottom: 30px;
 }
 
 html{
@@ -250,6 +263,51 @@ footer {
     color: #093E77;
 }
 
+.irrelevant-text-left{
+    font-size: 35px;
+    font-weight: 300;
+    font-family: "Open Sans";
+    line-height: 40px;
+    max-width:100%;
+    text-align: left;
+    color: #093E77;
+    margin:0;
+}
+
+.catchy-phrase-text{
+    color: gray;
+    font-size:25px;
+    margin-bottom: 10px;
+}
+
+.filler-text{
+    font-size: 1em;
+    line-height: 1.5em;
+    font-weight: 300;
+    text-align: justify;
+}
+
+.filler-text-right{
+    font-size: 14px;
+    line-height: 1.5em;
+    font-weight: 300;
+    text-align: justify;
+}
+
+.filler-text h1, .filler-text h2, .filler-text p{
+    color: gray;
+    margin:0;
+}
+
+.filler-text-right h1, .filler-text-right h2, .filler-text-right p{
+    color: gray;
+    margin:0;
+}
+
+.filler-text p{
+    margin-bottom: 15px;
+}
+
 .container{
     display: block;
     max-width: 1200px;
@@ -291,12 +349,14 @@ footer {
     margin-top: 0;
     margin-bottom: 1rem;
     line-height: 1.5;
+    text-align: justify;
+    width:95%
 
 }
 
 .element-image{
     vertical-align: middle;
-    width: 560px;
+    width: 95%;
     height: 300px;
 }
 
@@ -314,6 +374,55 @@ footer {
     background-size: cover  ;
     margin-right: 20px; 
     transition: 1.5s;
+    margin-top: 10px;
+}
+
+.carousel-text{
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    font-family: "Open Sans";
+    display: block;
+
+}
+
+.testo-sotto-immagine{
+    margin-bottom: 15px;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #093e77;
+}
+
+.city-container{
+    width:100%
+}
+
+.city-text-container{
+    width: 100%;
+    float: left;
+    margin-bottom: 25px;
+
+}
+
+.div-row-col{
+    max-width: 1360px;
+    margin:0 auto;
+}
+
+.col-sx{
+    width: 60%;
+    float: left;
+    padding: 12px;
+    margin-bottom:20px;
+}
+
+.col-dx{
+    width:35%;
+    float:right;
+    padding:12px;
+    margin-bottom:20px;
+    box-sizing: initial;
 }
 
 /*per il cellulare*/
