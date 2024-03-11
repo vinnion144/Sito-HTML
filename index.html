@@ -1,16 +1,21 @@
 <html>
     <head>
+
         <meta charset="UFT-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
         <title>
             Holiway
         </title>
+
         <SCRIPT src="script.js"> </SCRIPT>
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/3.0.0/flickity.min.css" integrity="sha512-fJcFDOQo2+/Ke365m0NMCZt5uGYEWSxth3wg2i0dXu7A1jQfz9T4hdzz6nkzwmJdOdkcS8jmy2lWGaRXl+nFMQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
     </head>
     <body>
+
         <header>
             <div class="homebar">
                 <a href="index.html">
@@ -18,29 +23,38 @@
                     Holiway
                 </a>
                 <a href="Chi-Siamo.html">Chi siamo</a>
+                <a  class="destinazioni-media" href="#destinazioni">Destinazioni</a>
             </div>
         </header>
+
         <main>
-            <div class="slide-container" id="destinazioni">
+
+            <div class="slide-container">
+
                 <div class="slide fade">
                     <a href="https://www.google.com/"><img src="Kyoto.jpg"> </a>
                     <div class="text">Immergiti nella magica Kyoto...</div>
                 </div>
+
                 <div class="slide fade">
                     <a href="https://www.google.com/"><img src="Messico.jpg"></a>
                     <div class="text">Messico per veri esploratori!</div>
                 </div>
+
                 <div class="slide fade">
                     <a href="https://www.google.com/"><img src="Lione.jpg"></a> 
                     <div class="text">Scopri la bellezza romantica di Lione</div>
                 </div>
+
                 <div class="slide fade">
                     <a href="https://www.google.com/"><img src="Sudafrica.jpg"></a>
                     <div class="text">Sudafrica...che meraviglia!</div> 
                 </div>
+
                 <a class="dietro" onclick="change(-1)">&#10094;</a>
                 <a class="avanti" onclick="change(1)">&#10095;</a>
-            </div>  
+            </div>
+
             <script>
                 var slideIndex = 1;
                 let j = 0;
@@ -86,12 +100,16 @@
                     }
                 }
             </script>
+
+            <script src="script.js"></script>
+    
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/3.0.0/flickity.pkgd.min.js" integrity="sha512-achKCfKcYJg0u0J7UDJZbtrffUwtTLQMFSn28bDJ1Xl9DWkl/6VDT3LMfVTo09V51hmnjrrOTbtg4rEgg0QArA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     
     
             
-            </script>
+
+            <!--
             <div class="grid-container">
                 <div class="grid-item">
                     <img src="Messico.jpg">
@@ -130,16 +148,19 @@
                     <img src="Messico.jpg">
                 </div>
             </div>
+            -->
 
             <div class="sub-text">
                 <strong>Scelti per te</strong>
             </div>
+
             <div class="light-border"></div>
             <div class="irrelevant-text">La felicita' e' un modo di viaggiare, non uno stato da raggiungere</div>
+            
             <div class="container">
                 <div class="row">
                     <div class="element">
-                        <img class="element-image" src="famiglia.jpg">
+                        <img class="element-image" src="famiglia.avif">
                     </div>
                     <div class="element">
                         <div class="element-text"> Famiglie</div>
@@ -147,19 +168,21 @@
                         <p class="element-text-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     </div>
                 </div>
-                <div class="row">
+
+                <div class="row sortMe">
                     <div class="element">
-                        <div class="element-text">Luna di miele</div>
+                        <p class="element-text">Luna di miele</p>
                         <p class="element-text-p">inshallah</p>
                         <p class="element-text-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     </div>
                     <div class="element">
-                        <img class="element-image" src="famiglia.jpg">
+                        <img class="element-image" src="luna-di-miele.jpeg">
                     </div>
                 </div>
+                
                 <div class="row">
                     <div class="element">
-                        <img class="element-image" src="famiglia.jpg">
+                        <img class="element-image" src="viaggio-studio.png">
                     </div>
                     <div class="element">
                         <div class="element-text"> Vacanza Studio</div>
@@ -169,15 +192,19 @@
                 </div>
             </div>
 
-            <div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true}'>
-                <div class="carousel-cell"><a href="nomecitta.html" class="irrelevant-text">Nome citta'</a></div>
-                <div class="carousel-cell"><a href="nomecitta.html" class="irrelevant-text">Nome citta'</a></div>
-                <div class="carousel-cell"><a href="nomecitta.html" class="irrelevant-text">Nome citta'</a></div>
-                <div class="carousel-cell"><a href="nomecitta.html" class="irrelevant-text">Nome citta'</a></div>
-                <div class="carousel-cell"><a href="nomecitta.html" class="irrelevant-text">Nome citta'</a></div>
-                <div class="carousel-cell"><a href="nomecitta.html" class="irrelevant-text">Nome citta'</a></div>   
+            <div class="sub-text">
+                <strong id="destinazioni">Destinazioni</strong>
             </div>
 
+            <div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true}'>
+                <div class="carousel-cell-lione"><a href="lione.html" class="carousel-text">Lione</a></div>
+                <div class="carousel-cell-sudafrica"><a href="sudafrica.html" class="carousel-text">SudAfrica</a></div>
+                <div class="carousel-cell-giappone"><a href="giappone.html" class="carousel-text">Giappone</a></div>
+                <div class="carousel-cell-messico"><a href="messico.html" class="carousel-text">Messico</a></div>
+                <div class="carousel-cell-stati-uniti"><a href="statiuniti.html" class="carousel-text">Stati Uniti</a></div>
+                <div class="carousel-cell-italia"><a href="italia.html" class="carousel-text">Italia</a></div>
+            </div>
+                
         </main>
         
         <footer>
@@ -188,5 +215,10 @@
         <a href="https://wa.me/3517776373/?text=Holiway Information Center" class="contact-link">
             <img src="contactus.png" alt="" class="img-res">
         </a>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                sortSectionsFromRightToLeft("sortMe");
+            });
+        </script>
     </body>
 </html>
