@@ -451,7 +451,7 @@ footer {
     line-height: 350px;
     text-align: center;
     margin-right: 40px;
-    background: linear-gradient(0deg, rgba(0,0,0, 0.6), rgba(0,0,0, 1)), url('foto.jpg');
+    background: linear-gradient(0deg, rgba(0,0,0, 0.6), rgba(0,0,0, 1)), url('immagini/foto.jpg');
     background-size: cover  ;
     margin-right: 20px; 
     transition: 1.5s;
@@ -466,7 +466,7 @@ footer {
     line-height: 350px;
     text-align: center;
     margin-right: 40px;
-    background: linear-gradient(0deg, rgba(0,0,0, 0.5), rgba(0,0,0, 0.5)), url('Lione.jpg');
+    background: linear-gradient(0deg, rgba(0,0,0, 0.5), rgba(0,0,0, 0.5)), url('immagini/Lione.jpg');
     background-size: cover  ;
     margin-right: 20px; 
     transition: 1.5s;
@@ -481,7 +481,7 @@ footer {
     line-height: 350px;
     text-align: center;
     margin-right: 40px;
-    background: linear-gradient(0deg, rgba(0,0,0, 0.6), rgba(0,0,0, 0.6)), url('idfk.jpg');
+    background: linear-gradient(0deg, rgba(0,0,0, 0.6), rgba(0,0,0, 0.6)), url('immagini/idfk.jpg');
     background-size: cover  ;
     margin-right: 20px; 
     transition: 1.5s;
@@ -496,7 +496,7 @@ footer {
     line-height: 350px;
     text-align: center;
     margin-right: 40px;
-    background: linear-gradient(0deg, rgba(0,0,0, 0.6), rgba(0,0,0, 0.6)), url('giappone.jpeg');
+    background: linear-gradient(0deg, rgba(0,0,0, 0.6), rgba(0,0,0, 0.6)), url('immagini/giappone.jpeg');
     background-size: cover  ;
     margin-right: 20px; 
     transition: 1.5s;
@@ -511,7 +511,7 @@ footer {
     line-height: 350px;
     text-align: center;
     margin-right: 40px;
-    background: linear-gradient(0deg, rgba(0,0,0, 0.6), rgba(0,0,0, 0.6)), url('messico-carousel.jpg');
+    background: linear-gradient(0deg, rgba(0,0,0, 0.6), rgba(0,0,0, 0.6)), url('immagini/messico-carousel.jpg');
     background-size: cover  ;
     margin-right: 20px; 
     transition: 1.5s;
@@ -526,7 +526,7 @@ footer {
     line-height: 350px;
     text-align: center;
     margin-right: 40px;
-    background: linear-gradient(0deg, rgba(0,0,0, 0.6), rgba(0,0,0, 0.6)), url('stati-uniti.jpeg');
+    background: linear-gradient(0deg, rgba(0,0,0, 0.6), rgba(0,0,0, 0.6)), url('immagini/stati-uniti.jpeg');
     background-size: cover  ;
     margin-right: 20px; 
     transition: 1.5s;
@@ -541,7 +541,7 @@ footer {
     line-height: 350px;
     text-align: center;
     margin-right: 40px;
-    background: linear-gradient(0deg, rgba(0,0,0, 0.6), rgba(0,0,0, 0.6)), url('italia.webp');
+    background: linear-gradient(0deg, rgba(0,0,0, 0.6), rgba(0,0,0, 0.6)), url('immagini/italia.webp');
     background-size: cover  ;
     margin-right: 20px; 
     transition: 1.5s;
