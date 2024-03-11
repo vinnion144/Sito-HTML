@@ -243,8 +243,8 @@ footer {
     bottom: -100;
     right: 0;
 }
-#footer_chisiamo {
-    top: -500px;
+#footbar_chisiamo {
+    top: 350px;
 }
 
 .grid-container {
@@ -595,7 +595,14 @@ footer {
     margin-bottom:20px;
     box-sizing: initial;
 }
-
+.video_container{
+    position:relative;
+    display:block;
+    margin: 10px;
+    padding:5px;
+    left: 15%;
+    width: 50%;
+}
 @media (max-width: 280px){
     .grid-item {
         height: 400px;
