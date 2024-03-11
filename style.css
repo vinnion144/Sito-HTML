@@ -243,6 +243,9 @@ footer {
     bottom: -100;
     right: 0;
 }
+#footer_chisiamo {
+    top: -500px;
+}
 
 .grid-container {
     display: flex;
