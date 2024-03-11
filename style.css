@@ -222,6 +222,7 @@ footer {
     text-wrap: wrap;
     border-left: 1px solid black;
     border-right: 1px solid black;
+    font-family: Arial;
 }
 .grid-item img{
     width:100%;
@@ -230,6 +231,7 @@ footer {
 
 .chi-siamo-testo{
     color:black;
+    font-family: Arial;
 }
 
 .sub-text{
@@ -239,6 +241,7 @@ footer {
     font-weight: 200;
     color: #093E77;
     text-align: center;
+    font-family: Arial;
 }
 
 .light-border{
@@ -261,6 +264,7 @@ footer {
     max-width:100%;
     text-align: center;
     color: #093E77;
+    font-family: Arial;
 }
 
 .irrelevant-text-left{
@@ -272,12 +276,14 @@ footer {
     text-align: left;
     color: #093E77;
     margin:0;
+    font-family: Arial;
 }
 
 .catchy-phrase-text{
     color: gray;
     font-size:25px;
     margin-bottom: 10px;
+    font-family: Arial;
 }
 
 .filler-text{
@@ -285,6 +291,7 @@ footer {
     line-height: 1.5em;
     font-weight: 300;
     text-align: justify;
+    font-family: Arial;
 }
 
 .filler-text-right{
@@ -292,20 +299,24 @@ footer {
     line-height: 1.5em;
     font-weight: 300;
     text-align: justify;
+    font-family: Arial;
 }
 
 .filler-text h1, .filler-text h2, .filler-text p{
     color: gray;
     margin:0;
+    font-family: Arial;
 }
 
 .filler-text-right h1, .filler-text-right h2, .filler-text-right p{
     color: gray;
     margin:0;
+    font-family: Arial;
 }
 
 .filler-text p{
     margin-bottom: 15px;
+    font-family: Arial;
 }
 
 .container{
@@ -318,6 +329,7 @@ footer {
     margin-right: auto;
     margin-left: auto;
     line-height: 1.5;
+    font-family: Arial;
 }
 
 .row{
@@ -325,7 +337,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
     font-size: 100%;
-    font-family: "Open Sans";
+    font-family: Arial;
     line-height: 1.5;
 }
 
@@ -340,11 +352,13 @@ footer {
     margin-bottom: 1rem;
     font-size: 25px;
     color: #093E77;
+    font-family: Arial;
 }
 
 .element-text-p{
     display: block;
     color: #295b8a;
+    font-family: Arial;
     font-size: 15px;
     margin-top: 0;
     margin-bottom: 1rem;
@@ -381,7 +395,7 @@ footer {
     text-align: center;
     color: white;
     font-size: 25px;
-    font-family: "Open Sans";
+    font-family: Arial;
     display: block;
 
 }
@@ -391,6 +405,7 @@ footer {
     font-size: 20px;
     text-transform: uppercase;
     font-weight: 700;
+    font-family: Arial;
     color: #093e77;
 }
 
@@ -402,12 +417,14 @@ footer {
     width: 100%;
     float: left;
     margin-bottom: 25px;
+    font-family: Arial;
 
 }
 
 .div-row-col{
     max-width: 1360px;
     margin:0 auto;
+    font-family: Arial;
 }
 
 .col-sx{
@@ -415,6 +432,7 @@ footer {
     float: left;
     padding: 12px;
     margin-bottom:20px;
+    font-family: Arial;
 }
 
 .col-dx{
@@ -423,8 +441,26 @@ footer {
     padding:12px;
     margin-bottom:20px;
     box-sizing: initial;
+    font-family: Arial;
+}
+.bottone_prezzo {
+    font-family: Arial;
+    position:relative;
+    display:block;
+    margin: 10px;
+    padding:5px;
+    background-color: rgb(81, 168, 183);
+    text-align: center;
+}
+.bottone_prezzo p{
+    font-size: 17px;
+    font-family: Arial;
 }
 
+.bottone_prezzo:hover {
+    scale:1.1;
+    background-color: rgb(81, 168, 183);
+}
 /*per il cellulare*/
 @media (max-width: 600px) {
     .grid-item {
