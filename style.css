@@ -264,7 +264,7 @@ footer {
 
 .grid-item-30 {
     width: 33.33%;
-    height: 400px;
+    height: auto;
     text-align: center;
     font-size: 15px;
     text-wrap: wrap;
@@ -600,8 +600,14 @@ footer {
     display:block;
     margin: 10px;
     padding:5px;
-    width: 30%;
-    left:23%;
+    width: 100%;
+
+.video{
+    width:70%; 
+    height:auto; 
+    margin-left:15%;
+}
+
 }
 @media (max-width: 280px){
     .grid-item {
@@ -615,7 +621,7 @@ footer {
         border-bottom: 1px solid black;
     }
     .grid-item-30 {
-        height: 400px;
+        height: auto;
         width:100%;
         margin: 30px;
         text-align: center;
@@ -687,7 +693,7 @@ footer {
         border-bottom: 1px solid black;
     }
     .grid-item-30 {
-        height: 400px;
+        height: auto;
         width:100%;
         margin: 30px;
         text-align: center;
@@ -771,7 +777,7 @@ footer {
         border-bottom: 1px solid black;
     }
     .grid-item-30 {
-        height: 400px;
+        height: auto;
         width:100%;
         margin: 30px;
         text-align: center;
@@ -811,14 +817,14 @@ footer {
         border-bottom: 1px solid black;
     }
     .grid-item-30 {
-        height: 400px;
+        height: auto;
         width:100%;
         margin: 30px;
         text-align: center;
         font-size: 15px;
         text-wrap: wrap;
-        border-left: 1px solid black;
-        border-right: 1px solid black;
+        border: 1px solid black;
+
     }
 
     .element-text{
