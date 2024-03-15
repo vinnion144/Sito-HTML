@@ -480,6 +480,10 @@ footer {
     margin-top: 10px;
 }
 
+.carousel-cell-lione:hover{
+    scale: 1.05;
+}
+
 .carousel-cell-sudafrica{
     height: 350px;
     width: 350px; 
@@ -493,6 +497,14 @@ footer {
     margin-right: 20px; 
     transition: 1.5s;
     margin-top: 10px;
+}
+
+.carousel-cell-sudafrica:hover{
+    scale: 1.05;
+}
+
+.carousel-cell-giappone:hover{
+    scale: 1.05;
 }
 
 .carousel-cell-giappone{
@@ -525,6 +537,10 @@ footer {
     margin-top: 10px;
 }
 
+.carousel-cell-messico:hover{
+    scale: 1.05;
+}
+
 .carousel-cell-stati-uniti{
     height: 350px;
     width: 350px; 
@@ -540,6 +556,10 @@ footer {
     margin-top: 10px;
 }
 
+.carousel-cell-stati-uniti:hover{
+    scale: 1.05;
+}
+
 .carousel-cell-italia{
     height: 350px;
     width: 350px; 
@@ -553,6 +573,10 @@ footer {
     margin-right: 20px; 
     transition: 1.5s;
     margin-top: 10px;
+}
+
+.carousel-cell-italia:hover{
+    scale: 1.05;
 }
 
 .carousel-text{
