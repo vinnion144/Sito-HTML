@@ -278,8 +278,14 @@ footer {
     height: 60%;
 }
 
+.chi-siamo-testo-h1{
+    text-align:center;
+    color: black;
+}
+
 .chi-siamo-testo{
     color:black;
+    text-align:justify;
 }
 
 .sub-text{
