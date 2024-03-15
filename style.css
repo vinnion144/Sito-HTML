@@ -286,7 +286,7 @@ footer {
 .chi-siamo-testo{
     color:black;
     text-align:justify;
-    padding: 0 5px;
+    padding: 0 10px;
 }
 
 .sub-text{
@@ -783,6 +783,10 @@ footer {
     .video{
         width:100%;
         margin-left:0%;
+    }
+
+    .footerbar{
+        height:auto
     }
 
 }
