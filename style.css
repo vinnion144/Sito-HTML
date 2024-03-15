@@ -633,13 +633,14 @@ footer {
     padding:5px;
     width: 100%;
 
+}
+
 .video{
     width:70%; 
     height:auto; 
     margin-left:15%;
 }
 
-}
 @media (max-width: 280px){
     .grid-item {
         height: 400px;
@@ -710,6 +711,11 @@ footer {
         height: auto;
     }
 
+    .video{
+        width:100%;
+        margin-left:0%;
+    }
+
 }
 
 @media (min-width:281px) and (max-width: 411px) {
@@ -774,6 +780,11 @@ footer {
         text-align: center;
     }
 
+    .video{
+        width:100%;
+        margin-left:0%;
+    }
+
 }
 
 /*per il cellulare*/
@@ -834,6 +845,11 @@ footer {
         text-align: center;
     }
 
+    .video{
+        width:100%;
+        margin-left:0%;
+    }
+
 }
 /*per il tablet*/
 @media (min-width: 600px) and (max-width: 1024px){
@@ -860,6 +876,11 @@ footer {
 
     .element-text{
         margin-top: 1rem;
+    }
+
+    .video{
+        width:80%;
+        margin-left:10%;
     }
     
 }
