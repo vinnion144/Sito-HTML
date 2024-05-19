@@ -1,13 +1,6 @@
-<?php
-    define('DB_HOST','localhost');
-    define('DB_USER','root');
-    define('DB_PASS','');
-    define('DB_NAME','sito-html');
-
-    try{
-        $dbh = new PDO("mysql:host=".DB_HOST.";dbname=".DB_NAME,DB_USER, DB_PASS);
-    }
-    catch (PDOException $e){
-        exit("Error: " . $e->getMessage());
+<?php 
+    $conn = new mysqli("localhost", "root", "","sito-html");
+    if($conn->connect_error){
+        die("<p>Connessione al server non riuscita: ".$conn->connect_error."</p>");
     }
 ?>
