@@ -31,6 +31,7 @@
                     session_start();
                     if(isset($_SESSION["username"])){
                         echo "<img src='immagini/logo.png'>";
+                        echo "<a href='backend/logout.php'>Log Out</a>";
                     }
                     else{
                         echo "<a href='pagine/login.html' style='margin-left:62%;'>Log in</a>";
