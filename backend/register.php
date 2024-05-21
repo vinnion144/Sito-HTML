@@ -25,7 +25,7 @@
         $_SESSION["username"] = $username;
         $_SESSION["password"] = $password;
         $conn->close();
-        header("location: ../principale/index.php");
+        header("location: ../index.php");
 
     }else{
         die("<p> Query Fallita!</p>");

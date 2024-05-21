@@ -18,12 +18,14 @@
     $ris = $conn->query($query) or die("<p>Query fallita! ".$conn->error."</p>");
 
     if($ris->num_rows == 0){
-        echo "Utente non trovato";
         $conn->close();
+        header("location: ../pagine/login.html");
     }else{
-
+        session_start();
+        $_SESSION["username"] = $username;
+        $_SESSION["password"] = $password;
         $conn->close();
-        header("location: ../principale/index.php");
+        header("location: ../index.php");
     }
 
 
