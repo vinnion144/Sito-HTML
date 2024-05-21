@@ -1,8 +1,4 @@
-<?php
-    if(isset($_SESSION["username"])){
-        
-    }
-?>
+
 
 <html>
     <head>
@@ -31,8 +27,16 @@
                 </a>
                 <a href="pagine/Chi-Siamo.html">Chi siamo</a>
                 <a  class="destinazioni-media" href="#destinazioni">Destinazioni</a>
-                <a href="pagine/login.html" style="margin-left:62%; ">Log in</a>
-                <a href="pagine/register.html">Register</a>
+                <?php
+                    session_start();
+                    if(isset($_SESSION["username"])){
+                        echo "<img src='immagini/logo.png'>";
+                    }
+                    else{
+                        echo "<a href='pagine/login.html' style='margin-left:62%;'>Log in</a>";
+                        echo "<a href='pagine/register.html'>Register</a>";
+                    }
+                ?>
             </div>
         </header>
 
