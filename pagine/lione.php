@@ -16,7 +16,7 @@
     <body>
         <header>
             <div class="homebar">
-                <a href="../index.html">
+                <a href="../index.php">
                     <img src="../immagini/logo.png" width="110px" height="60px" id="logo">
                     Holiway
                 </a>
@@ -59,7 +59,8 @@
                                 <p style="margin-top: 10px;">In questo viaggio incantato attraverso la Francia, si scopre non solo la bellezza dei suoi paesaggi e la ricchezza della sua storia, ma anche l'essenza stessa del savoir-vivre francese, fatta di buon cibo, buon vino e il piacere di condividere momenti preziosi con coloro che amiamo. È un viaggio che lascia un'impronta indelebile nella mente e nel cuore di chi ha il privilegio di compierlo, arricchendo la vita con ricordi indelebili e ispirazioni senza fine.</p>
                             </div>
                             <div class="bottone_prezzo">
-                                <p>A partire da 800€</p>
+                                <?php $_SESSION["Prezzo"] = 800; ?>
+                                <a href="../backend/lose_money.php"><p>A partire da 800$</p></a>
                             </div>
                         </div>
 

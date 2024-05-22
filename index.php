@@ -30,14 +30,16 @@
                 <?php
                     session_start();
                     if(isset($_SESSION["username"])){
-                        echo "<img src='immagini/logo.png'>";
+                        echo "<a href='pagine/profilo.php' class='foto-antia'><img src='immagini/logo.png'></a>";
                         echo "<a href='backend/logout.php'>Log Out</a>";
                     }
                     else{
                         echo "<a href='pagine/login.html' style='margin-left:62%;'>Log in</a>";
                         echo "<a href='pagine/register.html'>Register</a>";
                     }
+                    
                 ?>
+                
             </div>
         </header>
 
@@ -211,7 +213,7 @@
             </div>
 
             <div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true}'>
-                <div class="carousel-cell-lione"><a href="pagine/lione.html" class="carousel-text">Francia</a></div>
+                <div class="carousel-cell-lione"><a href="pagine/lione.php" class="carousel-text">Francia</a></div>
                 <div class="carousel-cell-sudafrica"><a href="pagine/sudafrica.html" class="carousel-text">SudAfrica</a></div>
                 <div class="carousel-cell-giappone"><a href="pagine/giappone.html" class="carousel-text">Giappone</a></div>
                 <div class="carousel-cell-messico"><a href="pagine/messico.html" class="carousel-text">Messico</a></div>
