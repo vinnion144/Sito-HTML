@@ -28,81 +28,37 @@ body{
     margin: 0;
 }
 
-header{
-    height: 100px;
-    width: 100%;
-    position: relative;
-}
-
-.homebar{
-    position:relative;
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: 100px;
-    margin-top: 0;
-    padding: 10px;
-    top: 0;
-    left: 0;
+.homebar {
+    display: inline-block;
+    max-height: 100px;
+    height: auto;
+    margin: 0;
     background-color: rgb(81, 168, 183);
     border-radius: 0px 10px 10px 0px;
+    white-space: nowrap; /* Prevent wrapping */
 }
 
-.homebar img {
+.link {
+    display: inline-block;
     max-width: 100%;
     max-height: 100%;
-    display: inline-block;
-    margin-right: 20px;
-    position: relative;
-    z-index: 0;
+    margin: 2px;
+    padding: 2px;
+    border: #093E77 solid 3px;
 }
 
-.homebar a {
-    max-width: 100%;
-    max-height: 100%;
-    position: relative;
-    display: inline-block;
-    margin-right: 1%;
-    font-size: 30px;
+.link a {
+    font-size: 170%;
 }
 
-#logo {
-    margin-right: 0px;
+.link:hover {
+    transform: scale(1.05);
 }
 
-.homebar a:hover {
-    max-width: 100%;
-    max-height: 100%;
-    position: relative;
-    display: inline-block;
-    margin-right: 20px;
-    font-size: 30px;
-    scale:1.1;
+.link a img {
+    width: 130px;
 }
 
-.homebar h1 {
-    max-width: 100%;
-    max-height:100%;
-    display: inline-block;
-    position: relative;
-    font-size: 30px;
-    top: -40px;
-    left: 30%;
-    margin-right: 20px;
-    scale:1.1;
-}
-
-.homebar h1:hover {
-    max-width: 100%;
-    max-height:100%;
-    display: inline-block;
-    position: relative;
-    font-size: 30px;
-    top: -40px;
-    left: 30%;
-    margin-right: 20px;
-    scale:1.1;
-}
 
 .foto-antia{
     width:9%;
@@ -163,7 +119,7 @@ footer {
 
 .slide-container {
     display: block;
-    width: 100%;
+    width: 90%;
     height: 400px;
     margin: auto;
     position: relative;
@@ -681,24 +637,9 @@ footer {
     }
 
     #logo{
-        width:80px;
-    }
-
-    .homebar a{
-        margin-right: 5px;
-        font-size: 20px;
-    }
-
-    .homebar a:hover {
-        max-width: 100%;
+        max-width: 20%;
         max-height: 100%;
-        position: relative;
-        display: inline-block;
-        margin-right: 20px;
-        font-size: 30px;
-        scale:1;
     }
-
     .col-sx{
         width:100%;
     }
@@ -757,20 +698,6 @@ footer {
         font-size:28px
     }
 
-    .homebar a{
-        margin-right: 20px;
-        font-size: 24px;
-    }
-
-    .homebar a:hover {
-        max-width: 100%;
-        max-height: 100%;
-        position: relative;
-        display: inline-block;
-        margin-right: 20px;
-        font-size: 30px;
-        scale:1;
-    }
 
     .col-sx{
         width:100%;
@@ -802,10 +729,6 @@ footer {
         visibility:collapse;
     }
 
-    .homebar a{
-        margin-right: 20px;
-        font-size: 28px;
-    }
 
     .text{
         top:70%;
