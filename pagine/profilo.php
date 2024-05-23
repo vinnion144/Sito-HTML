@@ -34,7 +34,7 @@
         <header>
             <div class="homebar">
 
-                <a href="../index.html">
+                <a href="../index.php">
                     <img src="../immagini/logo.png" width="110px" height="60px" id="logo">
                     Holiway
                 </a>
