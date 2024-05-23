@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -58,7 +62,11 @@
                                 <p style="margin-top: 10px;">In questo viaggio nell'anima del Giappone, si scopre una terra di contrasti e sorprese, dove antiche tradizioni convivono con la modernità più sfrenata. È un viaggio che non solo affascina e incanta, ma che lascia un'impronta indelebile nella mente e nel cuore di chi ha il privilegio di compierlo, aprendo la mente a nuove prospettive e ispirando un amore profondo per la cultura e la bellezza di questa straordinaria nazione.</p>
                             </div>
                             <div class="bottone_prezzo">
-                                <p>A partire da 1100$</p>
+                                <?php
+                                    $_SESSION["Prezzo"] = 1100;
+                                    $_SESSION["Paese"] = "giappone";
+                                ?>
+                                <a href="../backend/lose_money.php"><p>A partire da 1100$</p></a>
                             </div>
                         </div>
 
@@ -74,11 +82,11 @@
             <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/3.0.0/flickity.pkgd.min.js" integrity="sha512-achKCfKcYJg0u0J7UDJZbtrffUwtTLQMFSn28bDJ1Xl9DWkl/6VDT3LMfVTo09V51hmnjrrOTbtg4rEgg0QArA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
             <div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true}'>
-                <div class="carousel-cell-lione"><a href="../pagine/lione.html" class="carousel-text">Francia</a></div>
-                <div class="carousel-cell-sudafrica"><a href="../pagine/sudafrica.html" class="carousel-text">SudAfrica</a></div>
-                <div class="carousel-cell-messico"><a href="../pagine/messico.html" class="carousel-text">Messico</a></div>
-                <div class="carousel-cell-stati-uniti"><a href="../pagine/statiuniti.html" class="carousel-text">Stati Uniti</a></div>
-                <div class="carousel-cell-italia"><a href="../pagine/italia.html" class="carousel-text">Italia</a></div>
+                <div class="carousel-cell-lione"><a href="../pagine/lione.php" class="carousel-text">Francia</a></div>
+                <div class="carousel-cell-sudafrica"><a href="../pagine/sudafrica.php" class="carousel-text">SudAfrica</a></div>
+                <div class="carousel-cell-messico"><a href="../pagine/messico.php" class="carousel-text">Messico</a></div>
+                <div class="carousel-cell-stati-uniti"><a href="../pagine/statiuniti.php" class="carousel-text">Stati Uniti</a></div>
+                <div class="carousel-cell-italia"><a href="../pagine/italia.php" class="carousel-text">Italia</a></div>
             </div>
 
         </main>

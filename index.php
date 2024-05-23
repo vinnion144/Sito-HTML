@@ -19,7 +19,7 @@
 
         <header>
             <div class="homebar">
-                <a href="index.html">
+                <a href="index.php">
                     <img src="immagini/logo.png" width="110px" height="60px" id="logo">
                     Holiway
                 </a>
@@ -32,8 +32,8 @@
                         echo "<a href='backend/logout.php'>Log Out</a>";
                     }
                     else{
-                        echo "<a href='pagine/login.html' style='margin-left:62%;'>Log in</a>";
-                        echo "<a href='pagine/register.html'>Register</a>";
+                        echo "<a href='pagine/login.php' style='margin-left:62%;'>Log in</a>";
+                        echo "<a href='pagine/register.php'>Register</a>";
                     }
                     
                 ?>
@@ -212,11 +212,11 @@
 
             <div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true}'>
                 <div class="carousel-cell-lione"><a href="pagine/lione.php" class="carousel-text">Francia</a></div>
-                <div class="carousel-cell-sudafrica"><a href="pagine/sudafrica.html" class="carousel-text">SudAfrica</a></div>
-                <div class="carousel-cell-giappone"><a href="pagine/giappone.html" class="carousel-text">Giappone</a></div>
-                <div class="carousel-cell-messico"><a href="pagine/messico.html" class="carousel-text">Messico</a></div>
-                <div class="carousel-cell-stati-uniti"><a href="pagine/statiuniti.html" class="carousel-text">Stati Uniti</a></div>
-                <div class="carousel-cell-italia"><a href="pagine/italia.html" class="carousel-text">Italia</a></div>
+                <div class="carousel-cell-sudafrica"><a href="pagine/sudafrica.php" class="carousel-text">SudAfrica</a></div>
+                <div class="carousel-cell-giappone"><a href="pagine/giappone.php" class="carousel-text">Giappone</a></div>
+                <div class="carousel-cell-messico"><a href="pagine/messico.php" class="carousel-text">Messico</a></div>
+                <div class="carousel-cell-stati-uniti"><a href="pagine/statiuniti.php" class="carousel-text">Stati Uniti</a></div>
+                <div class="carousel-cell-italia"><a href="pagine/italia.php" class="carousel-text">Italia</a></div>
             </div>
                 
         </main>
