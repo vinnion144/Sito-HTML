@@ -26,6 +26,7 @@ html{
 
 body{
     margin: 0;
+    background-color: f3f3df;
 }
 
 .homebar {
@@ -119,9 +120,11 @@ footer {
 
 .slide-container {
     display: block;
-    width: 90%;
+    width: 80%;
     height: 400px;
     margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
     position: relative;
     top: 0px;
     border: 3px solid rgb(81, 168, 183);
@@ -413,7 +416,7 @@ footer {
 .carousel-cell{
     height: 350px;
     width: 350px; 
-    background-color: #666;
+    background-color: f3f3df;
     border-radius: 100%;
     line-height: 350px;
     text-align: center;
@@ -428,7 +431,7 @@ footer {
 .carousel-cell-lione{
     height: 350px;
     width: 350px; 
-    background-color: #666;
+    background-color: f3f3df;
     border-radius: 100%;
     line-height: 350px;
     text-align: center;
