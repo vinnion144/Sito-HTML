@@ -31,6 +31,7 @@ body{
 
 .homebar {
     display: inline-block;
+    width:100%;
     max-height: 100px;
     height: auto;
     margin: 0;

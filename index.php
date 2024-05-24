@@ -18,22 +18,28 @@
     <body>
 
         <header>
+        <header>
             <div class="homebar">
-                <a href="index.php">
-                    <img src="immagini/logo.png" width="110px" height="60px" id="logo">
-                    Holiway
-                </a>
-                <a href="pagine/Chi-Siamo.html">Chi siamo</a>
-                <a  class="destinazioni-media" href="#destinazioni">Destinazioni</a>
+                <div class="link"><a href="index.html"><img src="immagini/logo.png">Holiway</a></div>
+                <div class="link"><a href="pagine/Chi-Siamo.html">Chi siamo</a></div>
+                <div class="link"><a  class="destinazioni-media" href="#destinazioni">Destinazioni</a></div>
                 <?php
                     session_start();
                     if(isset($_SESSION["username"])){
-                        echo "<a href='pagine/profilo.php' class='foto-antia'><img src='immagini/logo.png'></a>";
-                        echo "<a href='backend/logout.php'>Log Out</a>";
+                        echo <<<EOD
+                        <div style='float:right;'>
+                            <div class='link'><a href='pagine/profilo.php''><img src='immagini/logo.png'></a></div>
+                            <div class='link'><a href='backend/logout.php'>Log Out</a></div>
+                        </div>
+                        EOD;
                     }
                     else{
-                        echo "<a href='pagine/login.php' style='margin-left:62%;'>Log in</a>";
-                        echo "<a href='pagine/register.php'>Register</a>";
+                        echo <<<EOD
+                            <div style='float:right;'>
+                                <div class='link'><a href='pagine/login.php'>Log in</a></div>
+                                <div class='link'><a href='pagine/register.php'>Register</a></div>
+                            </div>
+                        EOD;
                     }
                     
                 ?>
