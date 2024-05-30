@@ -18,7 +18,7 @@
 
     <header>
 
-        <div class="homebar">
+        <div class="homebar2">
             <a href="../index.php"><img src="../immagini/logo.png" width="110px" height="60px" id="logo"></a>
             <div style="text-align: center; width:86%;">
                 <div class="link" style="height:100%;"><a href="../index.php">Holiway</a></div>

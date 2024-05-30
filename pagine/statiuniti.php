@@ -22,7 +22,7 @@
 
     <body>
         <header>
-            <div class="homebar">
+            <div class="homebar2">
             <div class="link" style="padding:0"><a href="../index.php"><img src="../immagini/logo.png">Holiway</a></div>
                 <div class="link"><a href="Chi-Siamo.html" class="destinazioni-media4">Chi siamo</a></div>
             </div>

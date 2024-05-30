@@ -18,11 +18,15 @@
     <body>
 
         <header>
-        <header>
             <div class="homebar">
-                <div class="link" style="padding:0"><a href="index.php"><img src="immagini/logo.png">Holiway</a></div>
-                <div class="link"><a href="pagine/Chi-Siamo.html" class="destinazioni-media2">Chi siamo</a></div>
-                <div class="link"><a  class="destinazioni-media" href="#destinazioni">Destinazioni</a></div>
+                <div class="parte-sinistra">
+                    <div class="link" style="padding:0"><a href="index.php"><img src="immagini/logo.png">Holiway</a></div>
+                    <div class="link"><a href="pagine/Chi-Siamo.html" class="destinazioni-media2">Chi siamo</a></div>
+                    <div class="link"><a  class="destinazioni-media" href="#destinazioni">Destinazioni</a></div>
+                </div>
+
+                <div class="parte-destra"> 
+
                 <?php
                     session_start();
                     if(isset($_SESSION["username"])){
@@ -39,6 +43,7 @@
                     }
                     
                 ?>
+                </div>
                 
             </div>
         </header>

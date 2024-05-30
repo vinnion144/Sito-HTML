@@ -15,7 +15,7 @@
 <body>
 
     <header>
-        <div class="homebar">
+        <div class="homebar2">
             <a href="../index.php"><img src="../immagini/logo.png" width="110px" height="60px" id="logo"></a>
             <div style="text-align: center; width:86%;">
                 <div class="link" style="height:100%;"><a href="../index.php">Holiway</a></div>
@@ -52,12 +52,10 @@
                         <td><label for="confirm-password">Conferma Password:</label></td>
                         <td><input type="password" id="confirm-password" name="confirm-password" required></td>
                     </tr>
-                    <tr>
-                        <td colspan="2"><input type="submit" value="Registrati"></td>
-                    </tr>
+        
 
                 </table>
-                
+                <input type="submit" value="Registrati" class="pulsante-centrato">
 
 
 

@@ -21,12 +21,12 @@
         $soldi = $row["soldi"];
     }
     if($soldi>=$_SESSION["Prezzo"]){
+        $paese = $_SESSION["Paese"];
         $soldi = $soldi-$_SESSION["Prezzo"];
         $update_soldi = "UPDATE users SET soldi = '$soldi' WHERE username = '$username'";
         $conn->query("$update_soldi");
-        $_SESSION["echo"] = "";
-        echo "Transazione avvenuta con successo!";
-        header("Refresh:2; url=../index.php");
+        $_SESSION["echo"] = "Transazione avvenuta con successo";
+        header("Location: ../pagine/$paese.php");
     }else{
         $paese = $_SESSION["Paese"];
         $echo = "Insufficient Fund";

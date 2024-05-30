@@ -32,7 +32,7 @@
     <body>
 
         <header>
-            <div class="homebar">
+            <div class="homebar2">
 
                 <a href="../index.php">
                     <img src="../immagini/logo.png" width="110px" height="60px" id="logo">
