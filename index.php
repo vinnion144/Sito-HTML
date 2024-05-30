@@ -20,25 +20,21 @@
         <header>
         <header>
             <div class="homebar">
-                <div class="link"><a href="index.html"><img src="immagini/logo.png">Holiway</a></div>
-                <div class="link"><a href="pagine/Chi-Siamo.html">Chi siamo</a></div>
+                <div class="link" style="padding:0"><a href="index.php"><img src="immagini/logo.png">Holiway</a></div>
+                <div class="link"><a href="pagine/Chi-Siamo.html" class="destinazioni-media2">Chi siamo</a></div>
                 <div class="link"><a  class="destinazioni-media" href="#destinazioni">Destinazioni</a></div>
                 <?php
                     session_start();
                     if(isset($_SESSION["username"])){
                         echo <<<EOD
-                        <div style='float:right;'>
-                            <div class='link'><a href='pagine/profilo.php''><img src='immagini/logo.png'></a></div>
-                            <div class='link'><a href='backend/logout.php'>Log Out</a></div>
-                        </div>
+                            <div class='link'><a href='pagine/profilo.php' class='destinazioni-media3'><img src='immagini/logo.png'></a></div>
+                            <div class='link'><a href='backend/logout.php' class='destinazioni-media3'>Log Out</a></div>
                         EOD;
                     }
                     else{
                         echo <<<EOD
-                            <div style='float:right;'>
-                                <div class='link'><a href='pagine/login.php'>Log in</a></div>
-                                <div class='link'><a href='pagine/register.php'>Register</a></div>
-                            </div>
+                            <div class="link style='float:right;'"><a href="pagine/login.php" class='destinazioni-media3'>Log in</a></div>
+                            <div class="link" style='float:right;'><a href="pagine/register.php" class='destinazioni-media3'>Register</a></div>    
                         EOD;
                     }
                     

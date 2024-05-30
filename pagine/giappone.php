@@ -1,5 +1,8 @@
 <?php
     session_start();
+    if (!isset($_SESSION["echo"])){
+        $_SESSION["echo"] = "";
+    }
 ?>
 
 <!DOCTYPE html>
@@ -20,11 +23,8 @@
     <body>
         <header>
             <div class="homebar">
-                <a href="../index.php">
-                    <img src="../immagini/logo.png" width="110px" height="60px" id="logo">
-                    Holiway
-                </a>
-                <a href="Chi-Siamo.html">Chi siamo</a>
+                <div class="link" style="padding:0"><a href="../index.php"><img src="../immagini/logo.png">Holiway</a></div>
+                <div class="link"><a href="Chi-Siamo.html" class="destinazioni-media4">Chi siamo</a></div>
             </div>
         </header>
 
@@ -68,6 +68,15 @@
                                 ?>
                                 <a href="../backend/lose_money.php"><p>A partire da 1100$</p></a>
                             </div>
+                            <h2>
+                                <?php
+                                    if($_SESSION["echo"] != ""){
+                                        $echo = $_SESSION["echo"];
+                                        echo "<p style='color:black; text-align:center;'>$echo</p>";
+                                        $_SESSION["echo"] = "";
+                                    }
+                                ?>
+                            </h2>
                         </div>
 
                     </div>
@@ -88,6 +97,10 @@
                 <div class="carousel-cell-stati-uniti"><a href="../pagine/statiuniti.php" class="carousel-text">Stati Uniti</a></div>
                 <div class="carousel-cell-italia"><a href="../pagine/italia.php" class="carousel-text">Italia</a></div>
             </div>
+
+            <a href="https://wa.me/+393288874222/?text=Holiway Information Center" class="contact-link" style="bottom:-100px; z-index:5;">
+                <img src="../immagini/contactus.png" alt="" class="img-res">
+            </a>
 
         </main>
         <footer>

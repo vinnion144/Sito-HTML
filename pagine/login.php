@@ -19,23 +19,48 @@
     <header>
 
         <div class="homebar">
-                <a href="../index.php"><img src="../immagini/logo.png" width="110px" height="60px" id="logo"></a>
-                <a href="../index.php"><text style="color: white; font-size: 30px; font-family: Arial;">Holiway</text></a>
+            <a href="../index.php"><img src="../immagini/logo.png" width="110px" height="60px" id="logo"></a>
+            <div style="text-align: center; width:86%;">
+                <div class="link" style="height:100%;"><a href="../index.php">Holiway</a></div>
+                <div class="link" style="height:100%;"><a href="register.php">Register</a></div>
+            </div>
+            
+
         </div>
 
     </header>
+    
+    <div class="content">
 
-    <div class="form">
+        <h1 style="color:black;">Log In</h1>
+        <h2 style="color:black;">Welcome Back</h2>
 
-        <form action="" method="POST">
+        <div class="form">
 
-            <label for="username">Username:</label><input type="text" id="username" name="username"></p>
-            <label for="password">Password:</label><input type="password" id="password" name="password"></p>
-            <input type="submit" value="Invia">
+            <form action="" method="POST">
 
-        </form>
+                <table class="tabella">
 
+                    <tr>
+                        <td><label for="username">Username:</label></td>
+                        <td><input type="text" id="username" name="username" value="<?php echo $username?>" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="password">Password:</label></td>
+                        <td><input type="password" id="password" name="password" required></td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" value="Invia"></td>
+                    </tr>
+
+                </table>
+
+            </form>
+
+        </div>
     </div>
+
+    
 
     <?php
         require("../backend/dbconfig.php");
@@ -45,17 +70,21 @@
             $ris = $conn->query($query);
 
             if($ris->num_rows == 0){
-                echo "Utente non trovato";
+                echo "<h2 style='text-align:center;color:black;'>Utente non trovato</h2>";
             }
             else{
                 session_start();
                 $_SESSION["username"] = $username;
                 $_SESSION["password"] = $password;
-                echo "Login effettuato con successo";
+                echo "<h2 style='text-align:center;color:black;'>Login effettuato con successo</h2>";
                 header("Refresh:2; url=../index.php");
             }
         }
     ?>
+
+    <a href="https://wa.me/+393288874222/?text=Holiway Information Center" class="contact-link">
+        <img src="../immagini/contactus.png" alt="" class="img-res">
+    </a>
     
 </body>
 </html>

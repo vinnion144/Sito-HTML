@@ -9,34 +9,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
 
-    <div class="form">
+    <header>
+        <div class="homebar">
+            <a href="../index.php"><img src="../immagini/logo.png" width="110px" height="60px" id="logo"></a>
+            <div style="text-align: center; width:86%;">
+                <div class="link" style="height:100%;"><a href="../index.php">Holiway</a></div>
+                <div class="link" style="height:100%;"><a href="login.php">Log in</a></div>
+            </div>
+            
 
-        <form action="" method="POST">
+        </div>
 
-            <label for="register-username">Username:</label><input type="text" id="register-username" name="register-username" ></p>
+    </header>
 
-            <label for="register-password">Password:</label><input type="password" id="password-username" name="register-password" ></p>
-            <label for="confirm-password">Conferma Password: <input type="password" id="confirm-password" name="confirm-password" ></label></p>
 
-            <input type="submit" value="Registrati">
+    <div class="content">
 
-        </form>
+        <h1 style="color:black;">Welcome to Holiway</h1>
+        <h2 style="color:black">Fill to register</h2>
 
+        <div class="form">
+
+            <form action="" method="POST">
+                
+
+            <table class="tabella">
+                    
+                    <tr>
+                        <td><label for="register-username">Username:</label></td>
+                        <td><input type="text" id="register-username" name="register-username" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="register-password">Password:</label></td>
+                        <td><input type="password" id="register-password" name="register-password" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="confirm-password">Conferma Password:</label></td>
+                        <td><input type="password" id="confirm-password" name="confirm-password" required></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="submit" value="Registrati"></td>
+                    </tr>
+
+                </table>
+                
+
+
+
+            </form>
+
+        </div>
     </div>
+    
     <?php
 
         require("../backend/dbconfig.php");
         if(isset($_POST["register-username"]) and isset($_POST["register-password"])) {
             if ($_POST["register-username"] == "" or $_POST["register-password"] == "") {
-                echo "<p>username e password non possono essere vuoti!</p>";
+                echo "<h2 style='text-align:center;color:black;'>Username e password non possono essere vuoti!</h2>";
                 die("");
             } elseif ($_POST["register-password"] != $_POST["confirm-password"]){
-                echo "<p>Le password inserite non corrispondono</p>";
+                echo "<h2 style='text-align:center;color:black;'>Le password inserite non corrispondono</h2>";
                 die("");
             }
                 $query = "SELECT username FROM users WHERE username = '$username'";
@@ -44,7 +82,7 @@
                 $ris = $conn->query($query);
 
                 if($ris->num_rows > 0){
-                    echo "Username gia' in uso";
+                    echo "<h2 style='text-align:center;color:black;'>Username gia' in uso</h2>";
                     die("");
                 }
                 else{
@@ -54,7 +92,7 @@
                     $_SESSION["username"] = $username;
                     $_SESSION["password"] = $password;
                     $conn->close();
-                    echo ("<p>Registrazione effettuata con successo, verrai reindirizzato fra pochi istanti</p>");
+                    echo ("<h2 style='text-align:center;color:black;'>Registrazione effettuata con successo, verrai reindirizzato fra pochi istanti</h2>");
                     header("Refresh:5; url=../index.php");
                     }
             
@@ -63,7 +101,9 @@
             
     ?>
 
-
+    <a href="https://wa.me/+393288874222/?text=Holiway Information Center" class="contact-link">
+        <img src="../immagini/contactus.png" alt="" class="img-res">
+    </a>
 
 </body>
 </html>
