@@ -1,8 +1,27 @@
 <?php
+    $pagename = basename($_SERVER["PHP_SELF"]);
     session_start();
+    require("../backend/dbconfig.php");
+
+    if (isset($_SESSION["username"])) {
+        $id = $_SESSION["ID"];
+        $query = "SELECT destinations.pagina_nome FROM users JOIN favorites ON users.ID = favorites.User_ID 
+        JOIN destinations ON favorites.Destination_ID = destinations.id WHERE favorites.User_ID = $id 
+        AND destinations.pagina_nome = '$pagename'";
+
+        $ris = $conn->query($query);
+
+        if ($ris->num_rows == 0) {
+            $favorite= 'false';
+        }else{
+            $favorite = 'true';
+        }
+    }
+
     if (!isset($_SESSION["echo"])){
         $_SESSION["echo"] = "";
     }
+    
 ?>
 
 <!DOCTYPE html>
@@ -55,7 +74,27 @@
 
                         <div class="col-dx">
                             <div class="image-container">
-                                <div><img class="img-res-2" src="../immagini/messico2.webp"></div>
+                                <div>
+                                    <?php
+                                        if (isset($_SESSION['username'])){
+                                            if ($favorite =='false'){
+                                            echo <<<EOD
+                                            <a href="../backend/bookmark.php?favorite=$favorite&pagename=$pagename"><img src="../immagini/bookmark-false.png" class="bookmark"></a>
+                                            <img class="img-res-2" src="../immagini/Kyoto.jpg">
+                                            EOD;
+                                            }else{
+                                                echo <<<EOD
+                                                    <a href="../backend/bookmark.php?favorite=$favorite&pagename=$pagename"><img src="../immagini/Bookmark_icon.png" class="bookmark"></a>
+                                                    <img class="img-res-2" src="../immagini/Kyoto.jpg">
+                                                EOD;
+                                            }
+                                        }else{
+                                            echo <<<EOD
+                                            <img class="img-res-2" src="../immagini/Kyoto.jpg">
+                                            EOD;
+                                        }
+                                    ?>
+                                </div>
                             </div>
                             <div class="testo-sotto-immagine">Perche' viaggiare in messico</div>
                             <div class="filler-text-right">
