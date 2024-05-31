@@ -27,6 +27,13 @@ html{
 }
 
 body{
+    width:auto;
+    height:auto;
+    margin: 0;
+    background-color: whitesmoke;
+}
+
+.bodi{
     width:100%;
     height:100%;
     margin: 0;
@@ -84,6 +91,17 @@ body{
     white-space: nowrap; /* Prevent wrapping */
     color:white;
     font-family:Arial, Helvetica, sans-serif;
+}
+
+.mashallah{
+    display:flex;
+    text-align: center; 
+    width:86%;
+    height:100%;
+    justify-content:center;
+    position:relative;
+    bottom:0;
+    align-items:baseline;
 }
 
 .link {
@@ -249,9 +267,9 @@ footer {
 .contact-link{
     display: inline-block;
     width: 150px;
-    height: 150px;
+    height: 40.95px;
     position: fixed;
-    bottom: -100;
+    bottom: 0;
     right: 0;
 }
 #footbar_chisiamo {
