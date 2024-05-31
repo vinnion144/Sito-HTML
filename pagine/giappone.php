@@ -12,7 +12,9 @@
     $query = "SELECT destinations.pagina_nome FROM users JOIN favorites ON users.ID = favorites.User_ID 
         JOIN destinations ON favorites.Destination_ID = destinations.id WHERE favorites.User_ID = $id 
         AND destinations.pagina_nome = '$pagename'";
+
     $ris = $conn->query($query);
+    
     if ($ris->num_rows == 0) {
         $favorite= 'false';
     }else{
