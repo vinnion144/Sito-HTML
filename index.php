@@ -27,22 +27,22 @@
 
                 <div class="parte-destra"> 
 
-                <?php
-                    session_start();
-                    if(isset($_SESSION["username"])){
-                        echo <<<EOD
-                            <div class='link'><a href='pagine/profilo.php' class='destinazioni-media3'><img src='immagini/logo.png'></a></div>
-                            <div class='link'><a href='backend/logout.php' class='destinazioni-media3'>Log Out</a></div>
-                        EOD;
-                    }
-                    else{
-                        echo <<<EOD
-                            <div class="link style='float:right;'"><a href="pagine/login.php" class='destinazioni-media3'>Log in</a></div>
-                            <div class="link" style='float:right;'><a href="pagine/register.php" class='destinazioni-media3'>Register</a></div>    
-                        EOD;
-                    }
-                    
-                ?>
+                    <?php
+                        session_start();
+                        if(isset($_SESSION["username"])){
+                            echo <<<EOD
+                                <div class='link'><a href='pagine/profilo.php' class='destinazioni-media3'><img src='immagini/logo.png'></a></div>
+                                <div class='link'><a href='backend/logout.php' class='destinazioni-media3'>Log Out</a></div>
+                            EOD;
+                        }
+                        else{
+                            echo <<<EOD
+                                <div class="link" style='float:right;'"><a href="pagine/login.php" class='destinazioni-media3'>Log in</a></div>
+                                <div class="link" style='float:right;'><a href="pagine/register.php" class='destinazioni-media3'>Register</a></div>    
+                            EOD;
+                        }
+                        
+                    ?>
                 </div>
                 
             </div>

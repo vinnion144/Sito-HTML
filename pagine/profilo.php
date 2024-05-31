@@ -6,12 +6,13 @@
     else{
         header("location: ../index.php");
     }
-    require_once("../backend/dbconfig.php");
-    $data = "SELECT username, password, nome, cognome, soldi FROM users WHERE username = '$username'";
+    require("../backend/dbconfig.php");
+    $data = "SELECT username, password, nome, cognome, soldi, id FROM users WHERE username = '$username'";
 
     $ris = $conn->query($data);
     
     foreach ($ris as $row){
+        $id = $row["id"];
         $username = $row["username"];
         $nome = $row["nome"];
         $cognome = $row["cognome"];
@@ -31,36 +32,80 @@
 
     <body>
 
-        <header>
-            <div class="homebar2">
+    <header>
+            <div class="homebar">
+                <div class="parte-sinistra">
+                    <div class="link" style="padding:0"><a href="../index.php"><img src="../immagini/logo.png">Holiway</a></div>
+                    <div class="link"><a href="Chi-Siamo.html" class="destinazioni-media2">Chi siamo</a></div>
+                    <div class="link"><a  class="destinazioni-media" href="../index.php">Destinazioni</a></div>
+                </div>
 
-                <a href="../index.php">
-                    <img src="../immagini/logo.png" width="110px" height="60px" id="logo">
-                    Holiway
-                </a>
+                <div class="parte-destra"> 
 
-                <a href="../pagine/Chi-Siamo.html">Chi siamo</a>
-                <a  class="destinazioni-media" href="#destinazioni">Destinazioni</a>
-
-                <?php
-                    if(isset($_SESSION["username"])){
-                        echo "<a href='../backend/logout.php'>Log Out</a>";
-                    }
-                    else{
-                        echo "<a href='login.html' style='margin-left:62%;'>Log in</a>";
-                        echo "<a href='register.html'>Register</a>";
-                    }
-                ?>
-
+                    <?php
+                        if(isset($_SESSION["username"])){
+                            echo <<<EOD
+                                <div class='link'><a href='profilo.php' class='destinazioni-media3'><img src='../immagini/logo.png'></a></div>
+                                <div class='link'><a href='../backend/logout.php' class='destinazioni-media3'>Log Out</a></div>
+                            EOD;
+                        }
+                        else{
+                            echo <<<EOD
+                                <div class="link" style='float:right;'"><a href="login.php" class='destinazioni-media3'>Log in</a></div>
+                                <div class="link" style='float:right;'><a href="register.php" class='destinazioni-media3'>Register</a></div>    
+                            EOD;
+                        }
+                        
+                    ?>
+                </div>
+                
             </div>
         </header>
+        
+        <div class="content">
+            
+            <h1 style="color:black;">Dati personali</h1>
 
-        <form action="">
-            Username: <input type="text" name="username" id="username" <?php echo "value='$username'"?>></p>
-            Nome: <input type="text" name="nome" id="nome" <?php echo "value='$nome'"?>></p>
-            Cognome: <input type="text" name="cognome" id="cognome" <?php echo "value='$cognome'"?>></p>
-            Soldi:<input type="text" name="soldi" id="soldi" <?php echo "value='$soldi'"?>>
-        </form>
+            <form action="" method="POST">
+                <table class="tabella">
+                    <tr>
+                        <td><label for="username">Username:</label></td>
+                        <td><input type="text" name="username" id="username" <?php echo "value='$username'"?>></td>
+                    </tr>
+                    <tr>
+                        <td><label for="nome">Nome:</label></td>
+                        <td><input type="text" name="nome" id="nome" <?php echo "value='$nome'"?>></td>
+                    </tr>
+                    <tr>
+                        <td><label for="cognome">Cognome:</label></td>
+                        <td><input type="text" name="cognome" id="cognome" <?php echo "value='$cognome'"?>></td>
+
+                    </tr>
+                    <tr>
+                        <td><label for="soldi">Soldi:</label></td>
+                        <td><input type="text" name="soldi" id="soldi" <?php echo "value='$soldi'"?>></td>
+                        
+                    </tr>
+                    
+                    
+                </table>
+
+                <input type="submit" value="Aggiorna">
+
+            </form>
+        </div>
+
+        <?php
+            if(isset($_POST["username"])){
+                $username = $_POST["username"];
+                $nome = $_POST["nome"];
+                $cognome = $_POST["cognome"];
+                $soldi = $_POST["soldi"];
+                $dati = "UPDATE users SET username = '$username', nome = '$nome', cognome = '$cognome', soldi='$soldi' WHERE id = $id";
+                $ris = $conn->query($dati);
+                echo "<h2 style='text-align:center; color:black;'>Dati aggiornati con successo</h2>";
+            }
+        ?>
 
     </body>
 </html>

@@ -49,11 +49,10 @@
                         <td><label for="password">Password:</label></td>
                         <td><input type="password" id="password" name="password" required></td>
                     </tr>
-                    <tr>
-                        <td><input type="submit" value="Invia"></td>
-                    </tr>
 
                 </table>
+                
+                <input type="submit" value="Invia">
 
             </form>
 

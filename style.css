@@ -53,6 +53,11 @@ body{
     justify-content: center;
 }
 
+.parte-destra{
+    display: flex;
+    align-items: baseline;
+}
+
 
 .homebar {
     display: flex;
