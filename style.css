@@ -799,26 +799,49 @@ footer {
 
 }
 
+.preferiti-testo{
+    position: relative;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-family: Arial;
+    font-weight: bold;
+}
+
 @media (max-width:370px){
     .destinazioni-media4{
         display:none;
     }
+
+    .grid-item-30{
+        height:220px;
+    }
+
 }
 
-@media (max-width:460px){
+@media (max-width:530px){
     .destinazioni-media3{
         display:none;
     }
 }
 
-@media (max-width:580px){
+@media (max-width:660px){
     .destinazioni-media2{
+        display:none;
+    }
+
+    .preferiti-media{
         display:none;
     }
 }
 
 /*per il cellulare*/
 @media (min-width: 412px) and (max-width: 789px) {
+
+    .preferiti-media{
+        display:none;
+    }
     
     .destinazioni-media{
         display:none;
@@ -847,6 +870,7 @@ footer {
     .grid-item-30 {
         height: auto;
         width:100%;
+        height:250px;
         margin: 30px;
         text-align: center;
         font-size: 15px;
@@ -879,6 +903,10 @@ footer {
 }
 /*per il tablet*/
 @media (min-width: 790px) and (max-width: 1024px){
+    .destinazioni-media{
+        display:none;
+    }
+
     .grid-item {
         height: 400px;
         width:100%;
@@ -892,6 +920,7 @@ footer {
     .grid-item-30 {
         height: auto;
         width:100%;
+        height:400px;
         margin: 30px;
         text-align: center;
         font-size: 15px;
@@ -912,5 +941,7 @@ footer {
 }
 /*per i laptop, tipo quello che vedrà Vincenzo*/
 @media (min-width: 1024.1px) and (max-width: 1300px){
-
+    .destinazioni-media{
+        display:none;
+    }
 }

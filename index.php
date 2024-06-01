@@ -23,12 +23,17 @@
                     <div class="link" style="padding:0"><a href="index.php"><img src="immagini/logo.png">Holiway</a></div>
                     <div class="link"><a href="pagine/Chi-Siamo.html" class="destinazioni-media2">Chi siamo</a></div>
                     <div class="link"><a  class="destinazioni-media" href="#destinazioni">Destinazioni</a></div>
+                    <?php
+                        session_start();
+                        if(isset($_SESSION["username"])){
+                            echo "<div class='link'><a href='pagine/preferiti.php' class='preferiti-media'>Preferiti</a></div>";
+                        }
+                    ?>
                 </div>
 
                 <div class="parte-destra"> 
 
                     <?php
-                        session_start();
                         require("backend/dbconfig.php");
                         if(isset($_SESSION["username"])){
                             $username = $_SESSION["username"];

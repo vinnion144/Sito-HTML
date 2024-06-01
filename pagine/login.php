@@ -71,6 +71,7 @@
 
             if($ris->num_rows == 0){
                 echo "<h2 style='text-align:center;color:black;'>Utente non trovato</h2>";
+                echo "<a href='../backend/reset-password.php'><h3 style='text-align:center; color:black;'>Clicca qui' per resettare la password</h3></a>";
             }
             else{
                 session_start();
