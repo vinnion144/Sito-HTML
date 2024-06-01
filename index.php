@@ -25,8 +25,23 @@
                     <div class="link"><a  class="destinazioni-media" href="#destinazioni">Destinazioni</a></div>
                     <?php
                         session_start();
+                        require("backend/dbconfig.php");
                         if(isset($_SESSION["username"])){
-                            echo "<div class='link'><a href='pagine/preferiti.php' class='preferiti-media'>Preferiti</a></div>";
+
+                            $username = $_SESSION["username"];
+                            $query = "SELECT ID FROM users WHERE username = '$username'";
+                            $ris = $conn->query($query);
+                            foreach($ris as $row){
+                                $id = $row["ID"];
+                                $_SESSION["ID"] = $id;
+                            }
+
+                            $query = "SELECT favorites.User_ID FROM favorites JOIN users ON favorites.User_ID = users.ID WHERE favorites.User_ID = $id";
+                            $ris = $conn->query($query);
+                            if($ris->num_rows > 0){
+                                echo "<div class='link'><a href='pagine/preferiti.php' class='preferiti-media'>Preferiti</a></div>";
+                            }
+                            
                         }
                     ?>
                 </div>
@@ -34,20 +49,12 @@
                 <div class="parte-destra"> 
 
                     <?php
-                        require("backend/dbconfig.php");
-                        if(isset($_SESSION["username"])){
-                            $username = $_SESSION["username"];
+                        if(isset($_SESSION["username"])){                
                             echo <<<EOD
                                 <div class='link'><a href='pagine/profilo.php' class='destinazioni-media3'><img src='immagini/logo.png'></a></div>
                                 <div class='link'><a href='backend/logout.php' class='destinazioni-media3'>Log Out</a></div>
                             EOD;
 
-                            $query = "SELECT ID FROM users WHERE username = '$username'";
-                            $ris = $conn->query($query);
-                            foreach($ris as $row){
-                                $id = $row["ID"];
-                                $_SESSION["ID"] = $id;
-                            }
                         }
                         else{
                             echo <<<EOD

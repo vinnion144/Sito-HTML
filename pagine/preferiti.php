@@ -21,7 +21,6 @@
             <div class="parte-sinistra">
                 <div class="link" style="padding:0"><a href="../index.php"><img src="../immagini/logo.png">Holiway</a></div>
                 <div class="link"><a href="Chi-Siamo.html" class="destinazioni-media2">Chi siamo</a></div>
-                <div class="link"><a  class="destinazioni-media" href="#destinazioni">Destinazioni</a></div>
             </div>
 
             <div class="parte-destra"> 
@@ -56,10 +55,19 @@
                     $pagina_nome = $row["pagina_nome"];
                     $copertina = $row["copertina"];
                     $nome = $row["nome"];
+                    $testo = file_get_contents("../testi/$nome.txt");
                     echo <<<EOD
                             <div class="grid-item-30" style='border: 0px;'>
-                                <a href='$pagina_nome'><img src='../immagini/$copertina' style='width:100%;height:100%;'></a>
-                                <div class='preferiti-testo'>$nome</div>
+
+                                <div class="favorite-card">
+                                    <div class="favorite-card__img">
+                                        <img src="../immagini/$copertina" alt="$copertina">
+                                    </div>
+                                    <div class="favorite-card__testo">
+                                        <p><a href="$pagina_nome">$nome</a></p>
+                                        <p>$testo</p>
+                                    </div>
+                                </div>
                             </div>
 
                     EOD;
@@ -70,11 +78,7 @@
         ?>
     </div>
     
-    <footer>
-        <ul class="footerbar">
-            <li><p>Sito creato con la collaborazione di: Aloi Vincenzo, Vivenzio Francesco e Barbato Luca</p></li>
-        </ul>
-    </footer>
+    
 
 </body>
 </html>

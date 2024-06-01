@@ -678,6 +678,38 @@ footer {
     margin-left:15%;
 }
 
+.favorite-card {
+    border: 1.5px solid #be935b;
+    height:100%;
+    border-radius: 3px;
+    margin: 10px 0px;
+    padding: 5px;
+}
+.favorite-card__img {
+    width: 100%;
+    height:50%;
+}
+.favorite-card__img img {
+    width: 100%;
+    height:100%;
+}
+.favorite-card__testo{
+    display: inline;
+    align-items: center;
+}
+
+.favorite-card__testo p{
+    color:black;
+    font-size:24px;
+}
+
+.favorite-card__testo p a{
+    color:black;
+}
+
+
+
+
 @media (max-width: 280px){
     .grid-item {
         height: 400px;
