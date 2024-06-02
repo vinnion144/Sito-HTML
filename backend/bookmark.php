@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require("dbconfig.php");
+    require("../data/dbconfig.php");
     $favorite = $_GET["favorite"];
     $pagename = $_GET["pagename"];
     $id = $_SESSION["ID"];

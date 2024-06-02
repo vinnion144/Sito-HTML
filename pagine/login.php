@@ -63,7 +63,7 @@
     
 
     <?php
-        require("../backend/dbconfig.php");
+        require("../data/dbconfig.php");
         if(isset($_POST["username"]) and isset($_POST["password"])){
             $query = "SELECT username, password FROM users WHERE username= '$username' and password = '$password'";
 

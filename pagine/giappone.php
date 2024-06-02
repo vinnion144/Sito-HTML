@@ -1,7 +1,7 @@
 <?php
     $pagename = basename($_SERVER["PHP_SELF"]);
     session_start();
-    require("../backend/dbconfig.php");
+    require("../data/dbconfig.php");
 
     if (isset($_SESSION["username"])) {
         $id = $_SESSION["ID"];

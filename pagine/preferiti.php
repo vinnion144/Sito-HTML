@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require("../backend/dbconfig.php");
+    require("../data/dbconfig.php");
 
     if(!isset($_SESSION["username"])){
         header("Location: ../index.php");

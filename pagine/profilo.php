@@ -6,7 +6,7 @@
     else{
         header("location: ../index.php");
     }
-    require("../backend/dbconfig.php");
+    require("../data/dbconfig.php");
     $data = "SELECT username, password, nome, cognome, soldi, id FROM users WHERE username = '$username'";
 
     $ris = $conn->query($data);

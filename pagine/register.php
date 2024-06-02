@@ -66,7 +66,7 @@
     
     <?php
 
-        require("../backend/dbconfig.php");
+        require("../data/dbconfig.php");
         if(isset($_POST["register-username"]) and isset($_POST["register-password"])) {
             if ($_POST["register-username"] == "" or $_POST["register-password"] == "") {
                 echo "<h2 style='text-align:center;color:black;'>Username e password non possono essere vuoti!</h2>";

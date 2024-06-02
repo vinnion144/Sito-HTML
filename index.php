@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/3.0.0/flickity.min.css" integrity="sha512-fJcFDOQo2+/Ke365m0NMCZt5uGYEWSxth3wg2i0dXu7A1jQfz9T4hdzz6nkzwmJdOdkcS8jmy2lWGaRXl+nFMQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     </head>
+
     <body>
 
         <header>
@@ -25,7 +26,7 @@
                     <div class="link"><a  class="destinazioni-media" href="#destinazioni">Destinazioni</a></div>
                     <?php
                         session_start();
-                        require("backend/dbconfig.php");
+                        require("data/dbconfig.php");
                         if(isset($_SESSION["username"])){
 
                             $username = $_SESSION["username"];
@@ -97,100 +98,12 @@
                 <a class="avanti" onclick="change(1)">&#10095;</a>
             </div>
 
-            <script>
-                var slideIndex = 1;
-                let j = 0;
-                var timer = setInterval(change, 6000);
-                change(j);
-                function change(j) {
-                    if (j == 1 || j == -1 ) {
-                        if (j==1) {
-                            var i;
-                            var x = document.getElementsByClassName("slide");
-                            for (i = 0; i < x.length; i++) {
-                            x[i].style.display = "none"; 
-                            }
-                            slideIndex++;
-                            if (slideIndex > x.length) {slideIndex = 1}
-                            if (slideIndex < 1) {slideIndex = x.length} 
-                            x[slideIndex-1].style.display = "block";
-                            clearInterval(timer);
-                            timer = setInterval(change, 6000);
-                        } else {
-                            var i;
-                            var x = document.getElementsByClassName("slide");
-                            for (i = 0; i < x.length; i++) {
-                            x[i].style.display = "none"; 
-                            }
-                            slideIndex--;
-                            if (slideIndex > x.length) {slideIndex = 1} 
-                            if (slideIndex < 1) {slideIndex = x.length}
-                            x[slideIndex-1].style.display = "block";
-                            clearInterval(timer);
-                            timer = setInterval(change, 5000);
-                        }
-                    } else {
-                        var i;
-                        var x = document.getElementsByClassName("slide");
-                        for (i = 0; i < x.length; i++) {
-                        x[i].style.display = "none"; 
-                        }
-                        slideIndex++;
-                        if (slideIndex > x.length) {slideIndex = 1}
-                        if (slideIndex < 1) {slideIndex = x.length}  
-                        x[slideIndex-1].style.display = "block";
-                    }
-                }
-            </script>
 
-            <script src="script.js"></script>
-    
+            <script src="scripts/script2.js"></script>
+            <script src="scripts/script.js"></script>
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/3.0.0/flickity.pkgd.min.js" integrity="sha512-achKCfKcYJg0u0J7UDJZbtrffUwtTLQMFSn28bDJ1Xl9DWkl/6VDT3LMfVTo09V51hmnjrrOTbtg4rEgg0QArA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     
-    
-            
-
-            <!--
-            <div class="grid-container">
-                <div class="grid-item">
-                    <img src="Messico.jpg">
-                </div>
-                <div class="grid-item">
-                    <img src="Messico.jpg">
-                </div>
-                <div class="grid-item">
-                    <img src="Messico.jpg">
-                </div>
-                <div class="grid-item">
-                    <img src="Messico.jpg">
-                </div>
-                <div class="grid-item">
-                    <img src="Messico.jpg">
-                </div>
-                <div class="grid-item">
-                    <img src="Messico.jpg">
-                </div>
-                <div class="grid-item">
-                    <img src="Messico.jpg">
-                </div>
-                <div class="grid-item">
-                    <img src="Messico.jpg">
-                </div>
-                <div class="grid-item">
-                    <img src="Messico.jpg">
-                </div>
-                <div class="grid-item">
-                    <img src="Messico.jpg">
-                </div>
-                <div class="grid-item">
-                    <img src="Messico.jpg">
-                </div>
-                <div class="grid-item">
-                    <img src="Messico.jpg">
-                </div>
-            </div>
-            -->
 
             <div class="sub-text">
                 <strong>Scelti per te</strong>
@@ -254,13 +167,17 @@
                 <li><p>Sito creato con la collaborazione di: Aloi Vincenzo, Vivenzio Francesco e Barbato Luca</p></li>
             </ul>
         </footer>
+
         <a href="https://wa.me/+393288874222/?text=Holiway Information Center" class="contact-link">
             <img src="immagini/contactus.png" alt="" class="img-res">
         </a>
+
         <script>
             document.addEventListener("DOMContentLoaded", function() {
                 sortSectionsFromRightToLeft("sortMe");
             });
         </script>
+
     </body>
+
 </html>

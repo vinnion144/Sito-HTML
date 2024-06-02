@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require_once("dbconfig.php");
+    require_once("../data/dbconfig.php");
     if (isset($_SESSION["username"])){
         $username = $_SESSION["username"];
 

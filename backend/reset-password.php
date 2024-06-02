@@ -57,7 +57,7 @@
     </div>
 
     <?php
-        require("dbconfig.php");
+        require("../data/dbconfig.php");
 
         if(isset($_POST["username"])){
             if($_POST["password"] != $_POST["confirm-password"]){
