@@ -7,7 +7,7 @@
         header("location: ../index.php");
     }
     require("../data/dbconfig.php");
-    $data = "SELECT username, password, nome, cognome, soldi, id FROM users WHERE username = '$username'";
+    $data = "SELECT username, password, nome, cognome, soldi, icona, id FROM users WHERE username = '$username'";
 
     $ris = $conn->query($data);
     
@@ -17,6 +17,7 @@
         $nome = $row["nome"];
         $cognome = $row["cognome"];
         $soldi = $row["soldi"];
+        $icona = $row["icona"];
     }
 ?>
 
@@ -31,6 +32,7 @@
     </head>
 
     <body>
+
 
     <header>
             <div class="homebar">
@@ -61,6 +63,7 @@
                 
             </div>
         </header>
+     
         
         <div class="content">
             
@@ -95,6 +98,7 @@
             </form>
         </div>
 
+
         <?php
             if(isset($_POST["username"])){
                 $username = $_POST["username"];
@@ -107,5 +111,65 @@
             }
         ?>
 
+
+        <form class="box_icone" action="" method="POST" >
+
+            <div class="box_icona">
+                <input type="radio" name="Icon" value="1" id="Icona1" class="HideInput">
+                <label class="labelIcon" for="Icona1">
+                    <img class="IconaImg" src="../immagini/Icona1.jpg" alt="">
+                </label>
+            </div>
+            <div class="box_icona">
+                <input type="radio" name="Icon" value="2" id="Icona2" class="HideInput">
+                <label class="labelIcon" for="Icona2">
+                    <img class="IconaImg" src="../immagini/Icona2.jpg" alt="">
+                </label>
+            </div>
+            <div class="box_icona">
+                <input type="radio" name="Icon" value="3" id="Icona3" class="HideInput">
+                <label class="labelIcon" for="Icona3">
+                    <img class="IconaImg" src="../immagini/Icona3.jpg" alt="">
+                </label>
+            </div>
+            <div class="box_icona">
+                <input type="radio" name="Icon" value="4" id="Icona4" class="HideInput">
+                <label class="labelIcon" for="Icona4">
+                    <img class="IconaImg" src="../immagini/Icona4.jpg" alt="">
+                </label>
+            </div>
+            <div class="box_icona">
+                <input type="radio" name="Icon" value="5" id="Icona5" class="HideInput">
+                <label class="labelIcon" for="Icona5">
+                    <img class="IconaImg" src="../immagini/Icona5.jpg" alt="">
+                </label>
+            </div>
+            <div class="box_icona">
+                <input type="radio" name="Icon" value="6" id="Icona6" class="HideInput">
+                <label class="labelIcon" for="Icona6">
+                    <img class="IconaImg" src="../immagini/Icona6.jpg" alt="">
+                </label>
+            </div>
+            <div class="box_icona">
+                <input type="radio" name="Icon" value="7" id="Icona7" class="HideInput">
+                <label class="labelIcon" for="Icona7">
+                    <img class="IconaImg" src="../immagini/Icona7.png" alt="">
+                </label>
+            </div>
+            <input type="submit" value="Aggiorna">
+
+        </form>
+
+        <?php 
+            if (isset($_POST["Icon"])) {
+
+                $LinkIcona = $_POST["Icon"];
+                $UpdateIcon = "UPDATE users SET icona='$LinkIcona' WHERE id = $id";
+                $ris2 = $conn->query($UpdateIcon);
+
+                }
+        ?>
+
     </body>
+
 </html>
