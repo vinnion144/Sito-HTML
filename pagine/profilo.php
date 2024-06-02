@@ -19,6 +19,16 @@
         $soldi = $row["soldi"];
         $icona = $row["icona"];
     }
+    if(isset($_POST["username"])){
+        $username = $_POST["username"];
+        $nome = $_POST["nome"];
+        $cognome = $_POST["cognome"];
+        $soldi = $_POST["soldi"];
+        if(isset($_POST["Icon"])){$icona = $_POST["Icon"];}
+        $dati = "UPDATE users SET username = '$username', nome = '$nome', cognome = '$cognome', soldi='$soldi', icona='$icona' WHERE id = '$id'";
+        $ris = $conn->query($dati);
+        header("profilo.php");
+    }
 ?>
 
 <!DOCTYPE html>
@@ -139,19 +149,7 @@
 
             </form>
         </div>
-
-        <?php
-            if(isset($_POST["username"])){
-                $username = $_POST["username"];
-                $nome = $_POST["nome"];
-                $cognome = $_POST["cognome"];
-                $soldi = $_POST["soldi"];
-                if(isset($_POST["Icon"])){$icona = $_POST["Icon"];}
-                $dati = "UPDATE users SET username = '$username', nome = '$nome', cognome = '$cognome', soldi='$soldi', icona='$icona' WHERE id = '$id'";
-                $ris = $conn->query($dati);
-            }
-        ?>
-
+        
     </body>
 
 </html>
