@@ -4,7 +4,7 @@
             <img src="../immagini/logo.png" width="110px" height="60px" id="logo">
             Holiway
         </a>
-        <a href="../pagine/Chi-Siamo.html">Chi siamo</a>
+        <a href="../pagine/Chi-Siamo.php">Chi siamo</a>
         <a  class="destinazioni-media" href="#destinazioni">Destinazioni</a>
         <?php
             if(isset($_SESSION["username"])){

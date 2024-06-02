@@ -22,7 +22,7 @@
             <div class="homebar">
                 <div class="parte-sinistra">
                     <div class="link" style="padding:0"><a href="index.php"><img src="immagini/logo.png">Holiway</a></div>
-                    <div class="link"><a href="pagine/Chi-Siamo.html" class="destinazioni-media2">Chi siamo</a></div>
+                    <div class="link"><a href="pagine/Chi-Siamo.php" class="destinazioni-media2">Chi siamo</a></div>
                     <div class="link"><a  class="destinazioni-media" href="#destinazioni">Destinazioni</a></div>
                     <?php
                         session_start();
@@ -59,8 +59,8 @@
                         }
                         else{
                             echo <<<EOD
-                                <div class="link" style='float:right;'"><a href="login.php" class='destinazioni-media3'>Log in</a></div>
-                                <div class="link" style='float:right;'><a href="register.php" class='destinazioni-media3'>Register</a></div>    
+                                <div class="link" style='float:right;'"><a href="pagine/login.php" class='destinazioni-media3'>Log in</a></div>
+                                <div class="link" style='float:right;'><a href="pagine/register.php" class='destinazioni-media3'>Register</a></div>    
                             EOD;
                         }
                         

@@ -43,7 +43,7 @@
         <header>
             <div class="homebar2">
                 <div class="link" style="padding:0"><a href="../index.php"><img src="../immagini/logo.png">Holiway</a></div>
-                <div class="link"><a href="Chi-Siamo.html" class="destinazioni-media4">Chi siamo</a></div>
+                <div class="link"><a href="Chi-Siamo.php" class="destinazioni-media4">Chi siamo</a></div>
                 <?php
                     if(isset($_SESSION["username"])){
                         echo "<div class='link'><a href='preferiti.php' class='preferiti-media'>Preferiti</a></div>";
