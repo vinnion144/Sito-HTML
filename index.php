@@ -30,11 +30,12 @@
                         if(isset($_SESSION["username"])){
 
                             $username = $_SESSION["username"];
-                            $query = "SELECT ID FROM users WHERE username = '$username'";
+                            $query = "SELECT ID, icona FROM users WHERE username = '$username'";
                             $ris = $conn->query($query);
                             foreach($ris as $row){
                                 $id = $row["ID"];
                                 $_SESSION["ID"] = $id;
+                                $icona = $row["icona"];
                             }
 
                             $query = "SELECT favorites.User_ID FROM favorites JOIN users ON favorites.User_ID = users.ID WHERE favorites.User_ID = $id";
@@ -50,17 +51,16 @@
                 <div class="parte-destra"> 
 
                     <?php
-                        if(isset($_SESSION["username"])){                
+                        if(isset($_SESSION["username"])){
                             echo <<<EOD
-                                <div class='link'><a href='pagine/profilo.php' class='destinazioni-media3'><img src='immagini/logo.png'></a></div>
-                                <div class='link'><a href='backend/logout.php' class='destinazioni-media3'>Log Out</a></div>
+                                <div class="link" style="padding:0"><a href="pagine/profilo.php"><img src="immagini/Icona$icona.jpg" class="IconaImg" style="height:85px; width:85px"></a></div>
+                                <div class='link'><a href='../backend/logout.php' class='destinazioni-media3'>Log Out</a></div>
                             EOD;
-
                         }
                         else{
                             echo <<<EOD
-                                <div class="link" style='float:right;'"><a href="pagine/login.php" class='destinazioni-media3'>Log in</a></div>
-                                <div class="link" style='float:right;'><a href="pagine/register.php" class='destinazioni-media3'>Register</a></div>    
+                                <div class="link" style='float:right;'"><a href="login.php" class='destinazioni-media3'>Log in</a></div>
+                                <div class="link" style='float:right;'><a href="register.php" class='destinazioni-media3'>Register</a></div>    
                             EOD;
                         }
                         
