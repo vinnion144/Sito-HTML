@@ -54,7 +54,7 @@
                         if(isset($_SESSION["username"])){
                             echo <<<EOD
                                 <div class="link" style="padding:0"><a href="pagine/profilo.php"><img src="immagini/Icona$icona.jpg" class="IconaImg" style="height:85px; width:85px"></a></div>
-                                <div class='link'><a href='../backend/logout.php' class='destinazioni-media3'>Log Out</a></div>
+                                <div class='link'><a href='backend/logout.php' class='destinazioni-media3'>Log Out</a></div>
                             EOD;
                         }
                         else{
