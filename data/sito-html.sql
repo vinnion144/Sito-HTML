@@ -1,8 +1,8 @@
 -- --------------------------------------------------------
--- Host:                         localhost
--- Server version:               10.4.28-MariaDB - mariadb.org binary distribution
--- Server OS:                    Win64
--- HeidiSQL Version:             12.6.0.6765
+-- Host:                         127.0.0.1
+-- Versione server:              10.4.28-MariaDB - mariadb.org binary distribution
+-- S.O. server:                  Win64
+-- HeidiSQL Versione:            12.5.0.6677
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -15,11 +15,11 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 
--- Dumping database structure for sito-html
+-- Dump della struttura del database sito-html
 CREATE DATABASE IF NOT EXISTS `sito-html` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */;
 USE `sito-html`;
 
--- Dumping structure for table sito-html.destinations
+-- Dump della struttura di tabella sito-html.destinations
 CREATE TABLE IF NOT EXISTS `destinations` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
   `pagina_nome` char(50) NOT NULL,
@@ -28,9 +28,16 @@ CREATE TABLE IF NOT EXISTS `destinations` (
   PRIMARY KEY (`ID`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Dumping data for table sito-html.destinations: ~0 rows (approximately)
+-- Dump dei dati della tabella sito-html.destinations: ~6 rows (circa)
+INSERT INTO `destinations` (`ID`, `pagina_nome`, `copertina`, `nome`) VALUES
+	(1, 'lione.php', 'Lione.jpg', 'Lione'),
+	(2, 'sudafrica.php', 'Sudafrica.jpg', 'sudafrica'),
+	(3, 'giappone.php', 'giappone.jpeg', 'Giappone'),
+	(4, 'messico.php', 'messico-carousel.jpg', 'Messico'),
+	(5, 'statiuniti.php', 'stati-uniti.jpeg', 'statiuniti'),
+	(6, 'italia.php', 'italia.webp', 'Italia');
 
--- Dumping structure for table sito-html.favorites
+-- Dump della struttura di tabella sito-html.favorites
 CREATE TABLE IF NOT EXISTS `favorites` (
   `User_ID` int(11) NOT NULL DEFAULT 0,
   `Destination_ID` int(11) NOT NULL DEFAULT 0,
@@ -40,9 +47,17 @@ CREATE TABLE IF NOT EXISTS `favorites` (
   CONSTRAINT `FK_favorites_users` FOREIGN KEY (`User_ID`) REFERENCES `users` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Dumping data for table sito-html.favorites: ~0 rows (approximately)
+-- Dump dei dati della tabella sito-html.favorites: ~7 rows (circa)
+INSERT INTO `favorites` (`User_ID`, `Destination_ID`) VALUES
+	(29, 1),
+	(29, 2),
+	(29, 3),
+	(29, 4),
+	(29, 5),
+	(29, 6),
+	(77, 1);
 
--- Dumping structure for table sito-html.users
+-- Dump della struttura di tabella sito-html.users
 CREATE TABLE IF NOT EXISTS `users` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
   `nome` char(50) DEFAULT NULL,
@@ -50,13 +65,13 @@ CREATE TABLE IF NOT EXISTS `users` (
   `username` char(50) NOT NULL,
   `password` char(50) NOT NULL,
   `soldi` int(11) NOT NULL DEFAULT 0,
-  `icona` int(11) NOT NULL DEFAULT 1,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=82 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=81 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Dumping data for table sito-html.users: ~0 rows (approximately)
-INSERT INTO `users` (`ID`, `nome`, `cognome`, `username`, `password`, `soldi`, `icona`) VALUES
-	(81, 'asd', 'asd', 'asd', 'asd', 0, 3);
+-- Dump dei dati della tabella sito-html.users: ~2 rows (circa)
+INSERT INTO `users` (`ID`, `nome`, `cognome`, `username`, `password`, `soldi`) VALUES
+	(29, 'Ben', 'Dover', 'Vincenzo', 'asd', 84600),
+	(77, NULL, NULL, 'asd', 'asd', 0);
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
