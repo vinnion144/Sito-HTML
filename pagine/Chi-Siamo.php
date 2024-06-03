@@ -13,6 +13,19 @@
             $soldi = $row["soldi"];
             $icona = $row["icona"];
             }
+        require("../data/dbconfig.php");
+        $data = "SELECT username, password, nome, cognome, soldi, icona, id FROM users WHERE username = '$username'";
+
+        $ris = $conn->query($data);
+        
+        foreach ($ris as $row){
+            $id = $row["id"];
+            $username = $row["username"];
+            $nome = $row["nome"];
+            $cognome = $row["cognome"];
+            $soldi = $row["soldi"];
+            $icona = $row["icona"];
+    }
     }
 ?>
 <!DOCTYPE html>
