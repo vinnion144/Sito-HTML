@@ -28,7 +28,7 @@ CREATE TABLE IF NOT EXISTS `destinations` (
   PRIMARY KEY (`ID`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Data exporting was unselected.
+-- Dumping data for table sito-html.destinations: ~0 rows (approximately)
 
 -- Dumping structure for table sito-html.favorites
 CREATE TABLE IF NOT EXISTS `favorites` (
@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS `favorites` (
   CONSTRAINT `FK_favorites_users` FOREIGN KEY (`User_ID`) REFERENCES `users` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Data exporting was unselected.
+-- Dumping data for table sito-html.favorites: ~0 rows (approximately)
 
 -- Dumping structure for table sito-html.users
 CREATE TABLE IF NOT EXISTS `users` (
@@ -52,9 +52,11 @@ CREATE TABLE IF NOT EXISTS `users` (
   `soldi` int(11) NOT NULL DEFAULT 0,
   `icona` int(11) NOT NULL DEFAULT 1,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=81 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=82 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Data exporting was unselected.
+-- Dumping data for table sito-html.users: ~0 rows (approximately)
+INSERT INTO `users` (`ID`, `nome`, `cognome`, `username`, `password`, `soldi`, `icona`) VALUES
+	(81, 'asd', 'asd', 'asd', 'asd', 0, 3);
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
