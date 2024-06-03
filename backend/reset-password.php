@@ -20,8 +20,8 @@
             </div>
 
             <div class="parte-destra">
-                <div class="link" style='float:right;'><a href="register.php" class='destinazioni-media3'>Register</a></div>
-                <div class="link" style='float:right;'><a href="login.php" class='destinazioni-media3'>Log in</a></div>
+                <div class="link" style='float:right;'><a href="../pagine/register.php" class='destinazioni-media3'>Register</a></div>
+                <div class="link" style='float:right;'><a href="../pagine/login.php" class='destinazioni-media3'>Log in</a></div>
             </div>
             
         </div>
