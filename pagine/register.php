@@ -15,18 +15,17 @@
 <body class="bodi">
 
     <header>
-        <div class="homebar2">
-            <a href="../index.php"><img src="../immagini/logo.png" width="110px" height="60px" id="logo"></a>
-            <div style="text-align: center; width:86%;">
-                <div class="link" style="height:100%;"><a href="../index.php">Holiway</a></div>
-                <div class="link" style="height:100%;"><a href="login.php">Log in</a></div>
+        <div class="homebar">
+            <div class="parte-sinistra">
+                <div class="link" style="padding:0"><a href="../index.php"><img src="../immagini/logo.png"></a></div>
+            </div>
+
+            <div class="parte-destra">
+                <div class="link" style='float:right;'><a href="login.php" class='destinazioni-media3'>Log in</a></div>
             </div>
             
-
         </div>
-
     </header>
-
 
     <div class="content">
 
