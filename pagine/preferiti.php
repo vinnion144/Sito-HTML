@@ -67,6 +67,7 @@
 
             if($ris->num_rows == 0){
                 echo "<h2 style='text-align:center; color:black'>Non hai pagine preferite</h2>";
+                header("Refresh:2; url=../index.php");
             }else{
                 echo "<h2 style='text-align:center; color:black;;'>Le tue pagine preferite:</h2>";
                 echo "<div class='grid-container'>";
