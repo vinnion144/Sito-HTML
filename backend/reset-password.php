@@ -11,19 +11,20 @@
     <title>Reset Password</title>
     <link rel="stylesheet" href="../style.css">
 </head>
-<body class="bodi">
+<body>
 
     <header>
+        <div class="homebar">
+            <div class="parte-sinistra">
+                <div class="link" style="padding:0"><a href="../index.php"><img src="../immagini/logo.png"></a></div>
+            </div>
 
-        <div class="homebar2">
-            <a href="../index.php"><img src="../immagini/logo.png" width="110px" height="60px" id="logo"></a>
-                <div class ="mashallah">
-                    <div class="link" style="height:100%;"><a href="../index.php">Holiway</a></div>
-                    <div class="link" style="height:100%;"><a href="../pagine/register.php">Register</a></div>
-                    <div class="link" style="height:100%;"><a href="../pagine/login.php">Log in</a></div>
-                </div>
+            <div class="parte-destra">
+                <div class="link" style='float:right;'><a href="register.php" class='destinazioni-media3'>Register</a></div>
+                <div class="link" style='float:right;'><a href="login.php" class='destinazioni-media3'>Log in</a></div>
+            </div>
+            
         </div>
-
     </header>
 
     <div class="content">
@@ -80,7 +81,6 @@
             }
         }
     ?>
-
-
 </body>
+
 </html>

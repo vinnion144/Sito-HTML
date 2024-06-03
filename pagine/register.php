@@ -12,8 +12,7 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 
-<body class="bodi">
-
+<body>
     <header>
         <div class="homebar">
             <div class="parte-sinistra">
@@ -101,6 +100,5 @@
     <a href="https://wa.me/+393288874222/?text=Holiway Information Center" class="contact-link">
         <img src="../immagini/contactus.png" alt="" class="img-res">
     </a>
-
 </body>
 </html>

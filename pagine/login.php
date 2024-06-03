@@ -14,7 +14,7 @@
 </head>
 
 
-<body class="bodi">
+<body>
 
     <header>
         <div class="homebar">
@@ -74,7 +74,7 @@
                 session_start();
                 $_SESSION["username"] = $username;
                 $_SESSION["password"] = $password;
-                echo "<h2 style='text-align:center;color:black;'>Login effettuato con successo</h2>";
+                echo "<h2 style='text-align:center;color:black;'>Login effettuato con successo, verrai reindirizzato fra pochi istanti</h2>";
                 header("Refresh:2; url=../index.php");
             }
         }
@@ -83,6 +83,5 @@
     <a href="https://wa.me/+393288874222/?text=Holiway Information Center" class="contact-link">
         <img src="../immagini/contactus.png" alt="" class="img-res">
     </a>
-    
 </body>
 </html>
