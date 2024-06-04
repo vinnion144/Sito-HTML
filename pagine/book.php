@@ -2,6 +2,7 @@
     session_start();
     if (isset($_SESSION["username"])){
         $username = $_SESSION["username"];
+        $prenotazione = false;
     }
     else{
         header("location: ../index.php");
@@ -18,26 +19,6 @@
         $cognome = $row["cognome"];
         $soldi = $row["soldi"];
         $icona = $row["icona"];
-    }
-
-    if(isset($_POST["destinazione"]) and isset($_POST["data_inzio"]) and isset($_POST["data_fine"]) and isset($_POST["persone"])) {
-        $destinazione = $_POST["destinazione"];
-        $data_inizio = $_POST["data_inzio"];
-        $data_fine = $_POST["data_fine"];
-        $persone = $_POST["persone"];
-        $today = new Date('now');
-        echo ($today);
-        if ($data_inizio < $today or $data_fine < $data_inizio) {
-            echo ("<h2 style='text-align:center;color:black;'>Date non disponibli o non corettamente inserite</h2>");
-        } 
-        else{
-            $holiday = "INSERT INTO holidays(user_id, destinazione, data_inizio, data_fine, persone) VALUES('$id', '$destinazione', '$data_inzio', '$data_fine', '$persone')";
-            $collegamento = $conn->query($holiday);
-            // $book = "INSERT INTO book(User_ID, Holiday_ID) VALUES('$id', 'holiday-id')";
-            $conn->close();
-            echo ("<h2 style='text-align:center;color:black;'>Registrazione effettuata con successo, verrai reindirizzato fra pochi istanti</h2>");
-        }
-        
     }
 ?>
 
@@ -78,19 +59,19 @@
                     <div class="box_icone2">
 
                         <div class="box_icona2">
-                            <input type="radio" name="destinazione" value="ciao" id="Icona1" class="HideInput">
+                            <input type="radio" name="destinazione" value="ciao" id="Icona1">
                             <label for="Icona1">
                                 <p style="color:black">Messico</p>
                             </label>
                         </div>
                         <div class="box_icona2">
-                            <input type="radio" name="destinazione" value="ciao" id="Icona2" class="HideInput">
+                            <input type="radio" name="destinazione" value="ciao" id="Icona2">
                             <label for="Icona2">
                                 <p style="color:black">Messico</p>
                             </label>
                         </div>
                         <div class="box_icona2">
-                            <input type="radio" name="destinazione" value="ciao" id="Icona3" class="HideInput">
+                            <input type="radio" name="destinazione" value="ciao" id="Icona3">
                             <label for="Icona3">
                                 <p style="color:black">Messico</p>
                             </label>
@@ -100,19 +81,19 @@
 
                     <div class="box_icone2">
                         <div class="box_icona2">
-                            <input type="radio" name="destinazione" value="ciao" id="Icona4" class="HideInput">
+                            <input type="radio" name="destinazione" value="ciao" id="Icona4">
                             <label for="Icona4">
                                 <p style="color:black">Messico</p>
                             </label>
                         </div>
                         <div class="box_icona2">
-                            <input type="radio" name="destinazione" value="ciao" id="Icona5" class="HideInput">
+                            <input type="radio" name="destinazione" value="ciao" id="Icona5">
                             <label for="Icona5">
                                 <p style="color:black">Messico</p>
                             </label>
                         </div>
                         <div class="box_icona2">
-                            <input type="radio" name="destinazione" value="ciao" id="Icona6" class="HideInput">
+                            <input type="radio" name="destinazione" value="ciao" id="Icona6">
                             <label for="Icona6">
                                 <p style="color:black">Messico</p>
                             </label>
@@ -142,6 +123,28 @@
                     <input type="submit" value="Prenota" class="pulsante-centrato">
 
                 </form>
+                <?php
+                    if(isset($_POST["destinazione"]) && isset($_POST["data_inizio"]) && isset($_POST["data_fine"]) && isset($_POST["persone"])) {
+                        $destinazione = $_POST["destinazione"];
+                        $data_inizio = $_POST["data_inizio"];
+                        $data_fine = $_POST["data_fine"];
+                        $persone = $_POST["persone"];
+                        $today = date("d/m/Y");
+                        if ($data_inizio < $today or $data_fine < $data_inizio) {
+                            echo ("<h2 style='text-align:center;color:black;'>Date non disponibli o non corettamente inserite</h2>");
+                        } 
+                        else{
+                            $holiday = "INSERT INTO holidays(user_id, destinazione, data_inizio, data_fine, persone) VALUES('$id', '$destinazione', '$data_inizio', '$data_fine', '$persone')";
+                            $collegamento = $conn->query($holiday);
+                            // $book = "INSERT INTO book(User_ID, Holiday_ID) VALUES('$id', 'holiday-id')";
+                            $conn->close();
+                            echo ("<h2 style='text-align:center;color:black;'>Prenotazione avvenuta con successo</h2>");
+                            $prenotazione = true;
+                            echo($prenotazione);
+                        }
+                        
+                    }
+                ?>
 
             </div>
         </div>

@@ -36,7 +36,7 @@
             <form action="" method="POST">
                 
 
-            <table class="tabella">
+                <table class="tabella">
                     
                     <tr>
                         <td><label for="register-username">Username:</label></td>
