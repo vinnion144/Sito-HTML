@@ -19,6 +19,7 @@
         $soldi = $row["soldi"];
         $icona = $row["icona"];
     }
+    //per quando aggiorno le credenziali, codice qui sotto
     if(isset($_POST["username"])){
         $username = $_POST["username"];
         $nome = $_POST["nome"];

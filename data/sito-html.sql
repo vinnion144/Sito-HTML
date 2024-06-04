@@ -19,6 +19,18 @@
 CREATE DATABASE IF NOT EXISTS `sito-html` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */;
 USE `sito-html`;
 
+-- Dumping structure for table sito-html.book
+CREATE TABLE IF NOT EXISTS `book` (
+  `User_ID` int(11) NOT NULL DEFAULT 0,
+  `Holiday_ID` int(11) NOT NULL DEFAULT 0,
+  PRIMARY KEY (`User_ID`,`Holiday_ID`),
+  KEY `User_ID` (`User_ID`) USING BTREE,
+  KEY `Holiday_ID` (`Holiday_ID`),
+  CONSTRAINT `FK_book_users` FOREIGN KEY (`User_ID`) REFERENCES `users` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- Dumping data for table sito-html.book: ~0 rows (approximately)
+
 -- Dumping structure for table sito-html.destinations
 CREATE TABLE IF NOT EXISTS `destinations` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
@@ -57,7 +69,21 @@ INSERT INTO `favorites` (`User_ID`, `Destination_ID`) VALUES
 	(29, 6),
 	(77, 1),
 	(77, 4),
-	(77, 5);
+	(77, 5),
+	(77, 6);
+
+-- Dumping structure for table sito-html.holidays
+CREATE TABLE IF NOT EXISTS `holidays` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `data_inizio` date NOT NULL,
+  `data_fine` date NOT NULL,
+  `persone` int(1) NOT NULL,
+  `destinazione` char(50) DEFAULT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- Dumping data for table sito-html.holidays: ~0 rows (approximately)
 
 -- Dumping structure for table sito-html.users
 CREATE TABLE IF NOT EXISTS `users` (
@@ -69,12 +95,13 @@ CREATE TABLE IF NOT EXISTS `users` (
   `soldi` int(11) NOT NULL DEFAULT 0,
   `icona` int(11) NOT NULL DEFAULT 1,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=81 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=82 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Dumping data for table sito-html.users: ~2 rows (approximately)
+-- Dumping data for table sito-html.users: ~3 rows (approximately)
 INSERT INTO `users` (`ID`, `nome`, `cognome`, `username`, `password`, `soldi`, `icona`) VALUES
 	(29, 'Ben', 'Dover', 'Vincenzo', 'asd', 84600, 1),
-	(77, '', '', 'asd', 'asd', 0, 2);
+	(77, '', '', 'asd', 'asd', 2100, 4),
+	(81, NULL, NULL, 'dsa', 'dsa', 0, 1);
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
