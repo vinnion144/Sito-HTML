@@ -1,8 +1,8 @@
 <?php
     session_start();
+    $pagina_nome=$_GET["paginanome"];
     if (isset($_SESSION["username"])){
         $username = $_SESSION["username"];
-        $prenotazione = false;
     }
     else{
         header("location: ../index.php");
@@ -20,6 +20,7 @@
         $soldi = $row["soldi"];
         $icona = $row["icona"];
     }
+
 ?>
 
 <!DOCTYPE html>
@@ -39,7 +40,7 @@
                 </div>
 
                 <div class="parte-destra"> 
-                    <div class="link" style="padding:0"><a href="profilo.php"><img src="../immagini/Icona$icona.jpg" class="IconaImg" style="height:85px; width:85px"></a></div>
+                    <div class="link" style="padding:0"><a href="profilo.php"><img src="../immagini/$icona.jpg" class="IconaImg" style="height:85px; width:85px"></a></div>
                     <div class='link'><a href='../backend/logout.php' class='destinazioni-media3'>Log Out</a></div>
                 </div>
                 
@@ -47,7 +48,7 @@
         </header>
 
         <div class="content">
-
+            
             <h1 style="color:black;">Book your Holiday</h1>
             <h2 style="color:black">Fill to book</h2>
             <br>
@@ -56,51 +57,6 @@
 
                 <form action="" method="POST">
                 
-                    <div class="box_icone2">
-
-                        <div class="box_icona2">
-                            <input type="radio" name="destinazione" value="ciao" id="Icona1">
-                            <label for="Icona1">
-                                <p style="color:black">Messico</p>
-                            </label>
-                        </div>
-                        <div class="box_icona2">
-                            <input type="radio" name="destinazione" value="ciao" id="Icona2">
-                            <label for="Icona2">
-                                <p style="color:black">Messico</p>
-                            </label>
-                        </div>
-                        <div class="box_icona2">
-                            <input type="radio" name="destinazione" value="ciao" id="Icona3">
-                            <label for="Icona3">
-                                <p style="color:black">Messico</p>
-                            </label>
-                        </div>
-
-                    </div>
-
-                    <div class="box_icone2">
-                        <div class="box_icona2">
-                            <input type="radio" name="destinazione" value="ciao" id="Icona4">
-                            <label for="Icona4">
-                                <p style="color:black">Messico</p>
-                            </label>
-                        </div>
-                        <div class="box_icona2">
-                            <input type="radio" name="destinazione" value="ciao" id="Icona5">
-                            <label for="Icona5">
-                                <p style="color:black">Messico</p>
-                            </label>
-                        </div>
-                        <div class="box_icona2">
-                            <input type="radio" name="destinazione" value="ciao" id="Icona6">
-                            <label for="Icona6">
-                                <p style="color:black">Messico</p>
-                            </label>
-                        </div>
-
-                    </div>
-                    <br>
                     <table class="tabella">
 
                         <tr>
@@ -123,26 +79,33 @@
                     <input type="submit" value="Prenota" class="pulsante-centrato">
 
                 </form>
+
                 <?php
-                    if(isset($_POST["destinazione"]) && isset($_POST["data_inizio"]) && isset($_POST["data_fine"]) && isset($_POST["persone"])) {
-                        $destinazione = $_POST["destinazione"];
+
+                    if(isset($_POST["data_inizio"]) && isset($_POST["data_fine"]) && isset($_POST["persone"])) {
+                        $id = $_SESSION["ID"];
+                        $check = "SELECT destinazione, user_id FROM holidays WHERE destinazione = '$pagina_nome' AND user_id = $id";
+                        $ris = $conn->query($check);
+                        if($ris->num_rows > 0){
+                            $_SESSION["echo"] = "Hai gia' una vacanza prenotata!";
+                            header("Location: ../pagine/$pagina_nome");
+                        }
                         $data_inizio = $_POST["data_inizio"];
                         $data_fine = $_POST["data_fine"];
                         $persone = $_POST["persone"];
-                        $today = date("d/m/Y");
+                        $today = date("Y-m-d h:i:sa");
                         if ($data_inizio < $today or $data_fine < $data_inizio) {
                             echo ("<h2 style='text-align:center;color:black;'>Date non disponibli o non corettamente inserite</h2>");
-                        } 
+                        }
                         else{
-                            $holiday = "INSERT INTO holidays(user_id, destinazione, data_inizio, data_fine, persone) VALUES('$id', '$destinazione', '$data_inizio', '$data_fine', '$persone')";
+                            $holiday = "INSERT INTO holidays(user_id, destinazione, data_inizio, data_fine, persone) VALUES('$id', '$pagina_nome', '$data_inizio', '$data_fine', '$persone')";
                             $collegamento = $conn->query($holiday);
                             // $book = "INSERT INTO book(User_ID, Holiday_ID) VALUES('$id', 'holiday-id')";
                             $conn->close();
-                            echo ("<h2 style='text-align:center;color:black;'>Prenotazione avvenuta con successo</h2>");
-                            $prenotazione = true;
-                            echo($prenotazione);
+                            echo ("<h2 style='text-align:center;color:black;'>Verifying transaction.....</h2>");
+                            header("Refresh:2; url=lose_money.php?paginanome=$pagina_nome");
                         }
-                        
+
                     }
                 ?>
 

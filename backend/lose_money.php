@@ -3,7 +3,8 @@
     require_once("../data/dbconfig.php");
     if (isset($_SESSION["username"])){
         $username = $_SESSION["username"];
-
+        $pagina_nome = $_GET["paginanome"];
+        $id = $_SESSION["ID"];
         $controllo_soldi = "SELECT soldi FROM users WHERE username = '$username'";
 
         $ris = $conn->query("$controllo_soldi");
@@ -22,6 +23,8 @@
             $paese = $_SESSION["Paese"];
             $echo = "Insufficient Fund";
             $_SESSION["echo"] = $echo;
+            $query = "DELETE FROM holidays WHERE user_id = $id AND destinazione = '$pagina_nome'";
+            $conn->query($query);
             header("Location: ../pagine/$paese.php");
     }
     }else{

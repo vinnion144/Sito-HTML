@@ -110,8 +110,9 @@
                                 <?php
                                     $_SESSION["Prezzo"] = 1000;
                                     $_SESSION["Paese"] = "messico";
+                                    echo "<a href='../backend/book.php?paginanome=$pagename'><p>A partire da 1100$</p></a>";
                                 ?>
-                                <a href="../backend/lose_money.php"><p>A partire da 1000$</p></a>
+                                
                             </div>
                             <h2>
                                 <?php
