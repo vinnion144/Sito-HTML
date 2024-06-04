@@ -76,6 +76,7 @@
         <div class="content">
             
             <h1 style="color:black;">Dati personali</h1>
+            <a href="i_miei_viaggi.php"><h2 style="color:black;">I MIEI VIAGGI</h2></a>
 
             <form action="" method="POST">
                 <table class="tabella">
