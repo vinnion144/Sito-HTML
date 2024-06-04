@@ -107,7 +107,7 @@
                             <div class="bottone_prezzo">
                                 <?php
                                     $_SESSION["Prezzo"] = 1200;
-                                    $_SESSION["Paese"] = "statiuniti"
+                                    $_SESSION["Paese"] = "statiuniti";
                                     echo "<a href='../backend/book.php?paginanome=$pagename'><p>A partire da 1100$</p></a>";
                                 ?>
                                 

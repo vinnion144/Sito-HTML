@@ -98,12 +98,14 @@
                             echo ("<h2 style='text-align:center;color:black;'>Date non disponibli o non corettamente inserite</h2>");
                         }
                         else{
-                            $holiday = "INSERT INTO holidays(user_id, destinazione, data_inizio, data_fine, persone) VALUES('$id', '$pagina_nome', '$data_inizio', '$data_fine', '$persone')";
-                            $collegamento = $conn->query($holiday);
-                            // $book = "INSERT INTO book(User_ID, Holiday_ID) VALUES('$id', 'holiday-id')";
-                            $conn->close();
-                            echo ("<h2 style='text-align:center;color:black;'>Verifying transaction.....</h2>");
-                            header("Refresh:2; url=lose_money.php?paginanome=$pagina_nome");
+                            if($_SESSION["echo"] == ""){
+                                $holiday = "INSERT INTO holidays(user_id, destinazione, data_inizio, data_fine, persone) VALUES('$id', '$pagina_nome', '$data_inizio', '$data_fine', '$persone')";
+                                $collegamento = $conn->query($holiday);
+                                // $book = "INSERT INTO book(User_ID, Holiday_ID) VALUES('$id', 'holiday-id')";
+                                $conn->close();
+                                echo ("<h2 style='text-align:center;color:black;'>Verifying transaction.....</h2>");
+                                header("Refresh:2; url=lose_money.php?paginanome=$pagina_nome");
+                            }
                         }
 
                     }
